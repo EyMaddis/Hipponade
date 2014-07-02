@@ -6,7 +6,7 @@ class News {
     Date   releaseDate
 
     static hasMany = [tags: Tag]
-//    static belongsTo = User
+    static belongsTo = User
 
     static constraints = {
         headline(blank: false)
