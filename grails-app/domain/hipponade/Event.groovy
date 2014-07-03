@@ -1,9 +1,13 @@
 package hipponade
 
-class Event extends News{
-    Date date
+class Event{
+    String name
+    String description
     String location
-    
+    Date   date
+    Date   date_created
+
+
     static constraints = {
 
     }

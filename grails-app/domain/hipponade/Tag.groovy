@@ -1,7 +1,7 @@
 package hipponade
 
 class Tag {
-    String name
+    String label
 
     static constraints = {
         name(blank: false)

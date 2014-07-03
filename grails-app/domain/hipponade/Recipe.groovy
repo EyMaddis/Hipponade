@@ -5,14 +5,9 @@ class Recipe {
     String shortDescription
     String instructions
 
-    static hasMany = [tags: Tag, ingredients:Ingredient]
-
-    List ingredients = []
-    List tags = []
+    static hasMany = [tags: Tag, ingredients:Ingredient, images: Image]
 
     static constraints = {
-        tags nullable: true
-        ingredients
         name blank: false
         shortDescription blank: false, nullable: true
         instructions blank: false

@@ -3,7 +3,7 @@ package hipponade
 class News {
     String headline
     String content
-    Date   releaseDate
+    Date   date
 
     static hasMany = [tags: Tag]
     static belongsTo = User
