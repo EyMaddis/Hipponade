@@ -40,3 +40,5 @@ class User {
         password = springSecurityService?.passwordEncoder ? springSecurityService.encodePassword(password) : password
     }
 }
+
+// TODO: User-Relation auf die anderen Typen ("Bearbeitet von")
