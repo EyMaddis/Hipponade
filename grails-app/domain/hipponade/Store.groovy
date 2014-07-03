@@ -1,6 +1,6 @@
 package hipponade
 
-class Retailer {
+class Store {
     String name
     String street
     String city

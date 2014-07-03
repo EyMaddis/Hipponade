@@ -18,3 +18,8 @@ class Recipe {
         instructions blank: false
     }
 }
+
+/*
+ * redaktionell gepflegt
+ *
+ */
