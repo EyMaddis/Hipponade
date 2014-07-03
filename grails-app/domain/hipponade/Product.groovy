@@ -5,7 +5,8 @@ class Product {
     String text
     String ingredients
 
-    static hasMany = [retailer: Retailer]
+    static hasMany = [retailer: Store, tags: Tag] // Siegel wird in Tags gespeichert und bei der Seitengenerierung dynamisch abgefragt
+
 
     static constraints = {
 

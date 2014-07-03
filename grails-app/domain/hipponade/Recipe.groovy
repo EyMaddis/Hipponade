@@ -5,3 +5,8 @@ class Recipe {
     static constraints = {
     }
 }
+
+/*
+ * redaktionell gepflegt
+ *
+ */
