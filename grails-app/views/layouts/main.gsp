@@ -6,6 +6,8 @@
     <g:layoutHead/>
 </head>
 <body>
+<div class="navbar-wrapper">
+    <div class="container">
 
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
@@ -28,10 +30,12 @@
                         <li><g:link controller="About">Über Uns</g:link></li>
                     </ul>
                     <form class="navbar-form navbar-right" role="search">
-                        <div class="form-group">
+                        <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                            </span>
                         </div>
-                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
                     </form>
                 </div>
 
