@@ -12,16 +12,30 @@
 *= require bootstrap
 *= require_self
 */
-
-body {
-  padding-top: 70px;
+body, html{
+  height: 100%;
 }
 
+body {
+  &.main{
+    padding-top: 70px;
+  }
+  &.fullpage {
+    padding-top: 50px;
+  }
+}
+
+
 #myCarousel {
+  height: 100%;
+  .carousel-inner {
+    height: 100%;
+  }
   .item {
-    min-height: 500px;
-    background-size: cover;
+    height: 100%;
+    background-size: contain;
     background-position: 50%;
+    background-repeat: no-repeat;
   }
 }
 
@@ -32,4 +46,8 @@ body {
 hr {
   border-bottom: solid 1px #afafaf;
   margin: 5px 0;
+}
+
+.row {
+  max-width: 100%;
 }
