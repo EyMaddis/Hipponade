@@ -1,10 +1,9 @@
 package hipponade
 
 class Image {
-
-    String path
-
+    String fileName
     static constraints = {
-        path(blank: false)
+        // Limit upload file size to 2MB
+
     }
 }
