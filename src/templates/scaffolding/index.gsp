@@ -8,6 +8,7 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
+		<a href="#list-${domainClass.propertyName}" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="\${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
@@ -16,7 +17,8 @@
 		</div>
 		<div id="list-${domainClass.propertyName}" class="content scaffold-list" role="main">
 			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
-			<table>
+            <div class="table-responsive">
+            <table class="table table-striped">
 			<thead>
 					<tr>
 					<%  excludedProps = Event.allEvents.toList() << 'id' << 'version'
@@ -34,7 +36,7 @@
 				</thead>
 				<tbody>
 				<g:each in="\${${propertyName}List}" status="i" var="${propertyName}">
-					<tr class="\${(i % 2) == 0 ? 'even' : 'odd'}">
+					<tr >
 					<%  props.eachWithIndex { p, i ->
 							if (i == 0) { %>
 						<td><g:link action="show" id="\${${propertyName}.id}">\${fieldValue(bean: ${propertyName}, field: "${p.name}")}</g:link></td>
@@ -50,6 +52,7 @@
 				</g:each>
 				</tbody>
 			</table>
+            </div>
 			<div class="pagination">
 				<g:paginate total="\${${propertyName}Count ?: 0}" />
 			</div>
