@@ -19,15 +19,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Hipponade</a>
+                    <g:navigationLink linkOnly="true" class="navbar-brand" url="${createLink(uri: '/')}">Hipponade</g:navigationLink>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><g:link controller="News">Neuigkeiten</g:link></li>
-                        <li><g:link controller="Story">Geschichte</g:link></li>
-                        <li><g:link controller="Recipe">Rezepte</g:link></li>
-                        <li><g:link controller="Product">Produkte</g:link></li>
-                        <li><g:link controller="About">Über Uns</g:link></li>
+                        <g:navigationLink controller="news">Neuigkeiten</g:navigationLink>
+                        <g:navigationLink controller="story">Geschichte</g:navigationLink>
+                        <g:navigationLink controller="recipe">Rezepte</g:navigationLink>
+                        <g:navigationLink controller="product">Produkte</g:navigationLink>
+                        <g:navigationLink controller="about">Über Uns</g:navigationLink>
                     </ul>
                     <form class="navbar-form navbar-right" role="search">
                         <div class="input-group">
