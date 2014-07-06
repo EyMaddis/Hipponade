@@ -52,7 +52,8 @@
         </div>
     </g:if>
     <g:layoutBody/>
-    <footer class="row marketing">
+    <footer class="marketing">
+        <div class="row">
         <div class="col-md-3"><h5>Facebook</h5><p>
             Unsere Seite
         </p></div>
@@ -68,6 +69,15 @@
             <h5>Externe</h5>
             <p>Großhändler</p>
             <p>Admin</p>
+        </div>
+        </div>
+        <hr class="divider">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-2">Impressum</div>
+            <div class="col-md-2">Datenschutz</div>
+            <div class="col-md-2">Nutzungsbedingungen</div>
+            <div class="col-md-3"></div>
         </div>
     </footer>
 </div>
