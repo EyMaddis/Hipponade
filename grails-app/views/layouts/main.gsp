@@ -6,10 +6,9 @@
     <g:layoutHead/>
 </head>
 <body>
-<div class="navbar-wrapper">
-    <div class="container">
 
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -21,12 +20,12 @@
                     <a class="navbar-brand" href="#">Hipponade</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li><a href="#about">News</a></li>
-                        <li><a href="#contact">Geschichte</a></li>
-                        <li><a href="#contact">Rezepte</a></li>
-                        <li><a href="#contact">Produkte</a></li>
-                        <li><a href="#contact">Über Uns</a></li>
+                    <ul class="nav navbar-nav">
+                        <li><g:link controller="News">Neuigkeiten</g:link></li>
+                        <li><g:link controller="Story">Geschichte</g:link></li>
+                        <li><g:link controller="Recipe">Rezepte</g:link></li>
+                        <li><g:link controller="Product">Produkte</g:link></li>
+                        <li><g:link controller="About">Über Uns</g:link></li>
                     </ul>
                     <form class="navbar-form navbar-right" role="search">
                         <div class="form-group">
@@ -43,13 +42,26 @@
 </div>
 <div class="container">
     <g:layoutBody/>
+    <footer class="row marketing">
+        <div class="col-md-3"><h5>Facebook</h5><p>
+            Unsere Seite
+        </p></div>
+        <div class="col-md-3">
+            <h5>Twitter</h5>
+            <p>Hipponade folgen</p>
+        </div>
+        <div class="col-md-3">
+            <h5>YouTube</h5>
+            <p>Unser Kanal</p>
+        </div>
+        <div class="col-md-3">
+            <h5>Externe</h5>
+            <p>Großhändler</p>
+            <p>Admin</p>
+        </div>
+    </footer>
 </div>
     <asset:javascript src="application.js"/>
     <div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
-<!-- FOOTER -->
-<footer class="container">
-    <p class="pull-right"><a href="#">Back to top</a></p>
-    <p>&copy; 2014 Hipponade, Inc.</p>
-</footer>
 </body>
 </html>
