@@ -119,6 +119,7 @@ log4j.main = {
 grails.assets.less.compile = 'less4j'
 grails.assets.plugin."twitter-bootstrap".excludes = ["**/*.less"]
 grails.assets.plugin."twitter-bootstrap".includes = ["bootstrap.less"]
+grails.plugins.twitterbootstrap.fixtaglib = true
 
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'hipponade.User'
@@ -131,6 +132,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/js/**':                      ['permitAll'],
 	'/**/css/**':                     ['permitAll'],
 	'/**/images/**':                  ['permitAll'],
+    '/**/**':                         ['permitAll'], // TODO: Ändern und anpassen
 	'/**/favicon.ico':                ['permitAll'],
 	'/assets/**':                     ['permitAll']
 
