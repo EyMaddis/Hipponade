@@ -6,7 +6,6 @@
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#create-${domainClass.propertyName}" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="\${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
@@ -15,9 +14,6 @@
 		</div>
 		<div id="create-${domainClass.propertyName}" class="content scaffold-create form-group" role="main">
 			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
-			<g:if test="\${flash.message}">
-			<div class="message" role="status">\${flash.message}</div>
-			</g:if>
 			<g:hasErrors bean="\${${propertyName}}">
 			<ul class="errors" role="alert">
 				<g:eachError bean="\${${propertyName}}" var="error">

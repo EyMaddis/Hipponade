@@ -41,6 +41,12 @@
     </div>
 </div>
 <div class="container">
+    <g:if test="\${flash.message}">
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            ${flash.message}
+        </div>
+    </g:if>
     <g:layoutBody/>
     <footer class="row marketing">
         <div class="col-md-3"><h5>Facebook</h5><p>
