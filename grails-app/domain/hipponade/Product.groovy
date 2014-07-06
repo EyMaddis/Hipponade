@@ -9,6 +9,8 @@ class Product {
 
 
     static constraints = {
-
+        name()
+        description()
+        css(widget: 'textarea')
     }
 }
