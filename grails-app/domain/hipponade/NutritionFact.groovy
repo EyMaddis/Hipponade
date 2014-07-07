@@ -8,13 +8,14 @@ class NutritionFact {
     int   calories
     float fiber
 
-    static belongsTo = [Product, RecipeIngredient]
+    static belongsTo = [Product, Recipe]
     static hasMany = [products: Product, recipes: Recipe]
+
     static constraints = {
-        calories()
-        protein()
-        carbs()
-        fiber()
-        fat()
+        calories nullable: false
+        protein nullable: false
+        carbs nullable: false
+        fiber nullable: false
+        fat nullable: false
     }
 }

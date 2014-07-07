@@ -7,7 +7,7 @@ class Image {
     static hasMany = [recipes: Recipe, events: Event, products: Product]
     static constraints = {
         // Limit upload file size to 2MB
-        fileName(blank: false)
+        fileName blank: false, nullable: false
     }
 
     def beforeDelete() {

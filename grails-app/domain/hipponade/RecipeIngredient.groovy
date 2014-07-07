@@ -9,7 +9,7 @@ class RecipeIngredient {
     static belongsTo = [Ingredient]
     static constraints = {
         ingredient()
-        type(inList: ["g", "ml", "kg", "l", "Tl", "Tasse", "Prise", "cl"])
-        amount()
+        type nullable: false, blank: false, inList: ["g", "ml", "kg", "l", "Tl", "Tasse", "Prise", "cl"]
+        amount min: 1
     }
 }

@@ -11,10 +11,10 @@ class Event{
     static hasMany = [images: Image, tags: Tag]
 
     static constraints = {
-        name()
-        description()
-        location()
-        date()
-        dateCreated()
+        name nullable: false, blank: false, maxSize: 140
+        description nullable: false, blank: false
+        location widget: 'textarea'
+        date nullable: false
+        dateCreated display: false, editable: false, max: new Date() // max today
     }
 }

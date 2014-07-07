@@ -17,6 +17,7 @@ hibernate {
 environments {
     development {
         dataSource {
+            // Errors can be ignored, http://stackoverflow.com/a/12055561/1249001
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
         }

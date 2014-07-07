@@ -6,7 +6,7 @@ class Store {
     String street2
     String city
     int zipCode
-    String country
+    String country = "Deutschland"
     double longitude // for Google Maps
     double latitude
     String website
@@ -16,14 +16,14 @@ class Store {
     static hasMany = [products: Product]
 
     static constraints = {
-        name()
-        street1()
-        street2()
-        city()
+        name blank: false, nullable: false, range: 10..100
+        street1 blank: false, nullable: false
+        street2 blank: true, nullable: true
+        city blank: false, nullable: false
         zipCode()
         country()
         longitude()
         latitude()
-        website(url: true)
+        website(url: true, blank: true, nullable: true)
     }
 }

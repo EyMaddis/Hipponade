@@ -10,8 +10,8 @@ class Product {
 
 
     static constraints = {
-        name()
-        description()
-        css(widget: 'textarea')
+        name unique: true, nullable: false, blank: false, maxSize: 100
+        description blank: true, nullable: true
+        css widget: 'textarea', blank: true, nullable: true
     }
 }
