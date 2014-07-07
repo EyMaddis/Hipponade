@@ -7,12 +7,15 @@ class Recipe {
     String instructions
 
     static belongsTo = [Tag]
-    static hasMany = [tags: Tag, nutritions: NutritionFact, ingredients:RecipeIngredient, images: Image]
+    static hasMany = [tags: Tag, ingredients:RecipeIngredient, images: Image]
+    static hasOne = [nutrition: NutritionFact]
 
     static constraints = {
         name blank: false, nullable: false, unique: true
         shortDescription blank: false, nullable: true, maxSize: 140
         instructions blank: false, maxSize: 60000
+        nutrition nullable: true
+        images nullable: true
     }
 }
 

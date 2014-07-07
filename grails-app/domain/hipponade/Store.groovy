@@ -1,6 +1,6 @@
 package hipponade
 
-class Store {
+class Store {       //jeder kann hinzufügen mit captcha, admin autorisiert
     String name
     String street1
     String street2

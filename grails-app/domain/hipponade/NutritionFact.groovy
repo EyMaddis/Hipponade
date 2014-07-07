@@ -8,8 +8,11 @@ class NutritionFact {
     int   calories
     float fiber
 
+    Product product
+    Recipe recipe
+
     static belongsTo = [Product, Recipe]
-    static hasMany = [products: Product, recipes: Recipe]
+    //static hasOne = [product: Product, recipe: Recipe]
 
     static constraints = {
         calories nullable: false
@@ -17,5 +20,7 @@ class NutritionFact {
         carbs nullable: false
         fiber nullable: false
         fat nullable: false
+        product nullable: true
+        recipe nullable: true
     }
 }
