@@ -110,9 +110,7 @@ class ImageController {
             notFound()
             return
         }
-        def n = imageInstance.getFileName()
-        def file = new File('./grails-app/assets/images/products/' + n)
-        file.delete()
+
 
         imageInstance.delete flush: true
 

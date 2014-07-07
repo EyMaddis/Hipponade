@@ -5,7 +5,8 @@ class Recipe {
     String shortDescription
     String instructions
 
-    static hasMany = [tags: Tag, ingredients:Ingredient, images: Image]
+    static belongsTo = [Tag]
+    static hasMany = [tags: Tag, nutritions: NutritionFact, ingredients:RecipeIngredient, images: Image]
 
     static constraints = {
         name blank: false

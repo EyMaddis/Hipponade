@@ -16,6 +16,14 @@ class Store {
     static hasMany = [products: Product]
 
     static constraints = {
-
+        name()
+        street1()
+        street2()
+        city()
+        zipCode()
+        country()
+        longitude()
+        latitude()
+        website(url: true)
     }
 }

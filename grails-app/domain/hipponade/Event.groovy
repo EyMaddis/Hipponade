@@ -5,10 +5,16 @@ class Event{
     String description
     String location
     Date   date
-    Date   date_created
+    Date   dateCreated = new Date()
 
+    static belongsTo = [Image, Tag]
+    static hasMany = [images: Image, tags: Tag]
 
     static constraints = {
-
+        name()
+        description()
+        location()
+        date()
+        dateCreated()
     }
 }
