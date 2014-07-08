@@ -63,7 +63,7 @@
 		
 	</label>
     <div class="col-sm-10">
-        <g:select name="recipes" from="${hipponade.Recipe.list()}" multiple="multiple" optionKey="id" size="5" value="${productInstance?.recipes*.id}" class="many-to-many form-control"/>
+        <g:select name="recipes" from="${hipponade.Recipe.list()}" multiple="multiple" optionKey="id" optionValue="name" size="5" value="${productInstance?.recipes*.id}" class="many-to-many form-control"/>
 
     </div>
 </div>
@@ -85,7 +85,7 @@
 		
 	</label>
     <div class="col-sm-10">
-        <g:select name="images" from="${hipponade.Image.list()}" multiple="multiple" optionKey="id" size="5" value="${productInstance?.images*.id}" class="many-to-many form-control"/>
+        <g:select name="images" from="${hipponade.Image.list()}" multiple="multiple" optionKey="id" optionValue="fileName" size="5" value="${productInstance?.images*.id}" class="many-to-many form-control"/>
 
     </div>
 </div>
@@ -96,7 +96,7 @@
 		
 	</label>
     <div class="col-sm-10">
-        <g:select name="ingredients" from="${hipponade.Ingredient.list()}" multiple="multiple" optionKey="id" size="5" value="${productInstance?.ingredients*.id}" class="many-to-many form-control"/>
+        <g:select name="ingredients" from="${hipponade.Ingredient.list()}" multiple="multiple" optionKey="id" optionValue="name" size="5" value="${productInstance?.ingredients*.id}" class="many-to-many form-control"/>
 
     </div>
 </div>

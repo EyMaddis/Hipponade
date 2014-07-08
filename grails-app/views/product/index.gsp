@@ -15,15 +15,15 @@
             <g:each in="${productInstanceList}" status="i" var="productInstance">
 
                 <div class="col-md-3">
-                    <g:link action="show"
+                     <g:link action="show"
                             id="${productInstance.id}"><img class="img-responsive"
                                                             src="/Hipponade/assets/products/${productInstance?.images[0].fileName}"
                                                             alt="..."></g:link>
 
                     <div class="caption">
 
-                        <h4><g:link action="show"
-                                    id="${productInstance.id}">${fieldValue(bean: productInstance, field: "name")}</g:link></h4>
+                        <p class="lead"><g:link action="show"
+                                    id="${productInstance.id}">${fieldValue(bean: productInstance, field: "name")}</g:link></p>
 
                         <p>${fieldValue(bean: productInstance, field: "shortDescription")}</p>
                     </div>
@@ -31,7 +31,9 @@
             </g:each>
 
         </div>
-
+        <sec:ifLoggedIn>
+            <p class="btn btn-default"> <g:link class="create" action="create">Produkt anlegen</g:link></p>
+        </sec:ifLoggedIn>
         <div class="row schnack">
             <div class="col-md-4">
                 <p class="lead">Der Umwelt zuliebe</p>

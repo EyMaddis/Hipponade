@@ -21,6 +21,10 @@ class Product {
         nutrition nullable: true
     }
 
+    static mapping = {
+        description type:'text'
+    }
+
     def beforeDelete = {
         nutrition?.delete(flush: true)
     }

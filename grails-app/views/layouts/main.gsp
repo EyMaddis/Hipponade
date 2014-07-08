@@ -31,14 +31,14 @@
         <div class="col-md-3">
             <h5>Externe</h5>
             <p><g:navigationLink controller="store" action="index" linkOnly="true">Großhändler</g:navigationLink></p>
-            <p><g:navigationLink controller="login" action="auth" linkOnly="true">Admin</g:navigationLink></p>
         </div>
         </div>
         <hr class="divider">
         <div class="row">
-            <div class="col-md-2 col-md-offset-3">Impressum</div>
+            <div class="col-md-2 col-md-offset-2">Impressum</div>
             <div class="col-md-2">Datenschutz</div>
             <div class="col-md-2">Nutzungsbedingungen</div>
+            <div class="col-md-2"><g:navigationLink controller="login" action="auth" linkOnly="true">Admin</g:navigationLink></div>
         </div>
     </footer>
 </div>
