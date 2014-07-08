@@ -10,7 +10,6 @@
 <body>
 <div class="container">
     <div id="list-product" class="content scaffold-list marketing" role="main">
-        <p class="lead">Alle Getränke im Überblick</p>
 
         <div class="row">
             <g:each in="${productInstanceList}" status="i" var="productInstance">

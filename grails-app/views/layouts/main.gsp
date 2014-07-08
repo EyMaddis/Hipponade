@@ -18,20 +18,20 @@
     <footer class="marketing">
         <div class="row">
         <div class="col-md-3"><h5>Facebook</h5><p>
-            Unsere Seite
+            <a href="http://www.facebook.com">Unsere Seite</a>
         </p></div>
         <div class="col-md-3">
             <h5>Twitter</h5>
-            <p>Hipponade folgen</p>
+            <p><a href="http://www.twitter.com">Hipponade folgen</a></p>
         </div>
         <div class="col-md-3">
             <h5>YouTube</h5>
-            <p>Unser Kanal</p>
+            <p><a href="http://www.youtube.com">Unser Kanal</a></p>
         </div>
         <div class="col-md-3">
             <h5>Externe</h5>
-            <p>Großhändler</p>
-            <p>Admin</p>
+            <p><g:navigationLink controller="store" action="index" linkOnly="true">Großhändler</g:navigationLink></p>
+            <p><g:navigationLink controller="login" action="auth" linkOnly="true">Admin</g:navigationLink></p>
         </div>
         </div>
         <hr class="divider">

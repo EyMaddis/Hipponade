@@ -36,6 +36,7 @@
             </g:if>
             
         </ol>
+        <sec:ifLoggedIn>
         <g:form url="[resource: imageInstance, action: 'delete']" method="DELETE">
             <fieldset class="buttons pull-right">
                 <g:link class="edit btn btn-warning" action="edit" resource="${imageInstance}"><g:message
@@ -45,6 +46,7 @@
                                 onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"/>
             </fieldset>
         </g:form>
+        </sec:ifLoggedIn>
     </div>
 </div>
 </body>

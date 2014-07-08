@@ -6,6 +6,6 @@
 </head>
 
 <body>
- Wir sind toll
+<div class="container">Wir sind toll</div>
 </body>
 </html>
