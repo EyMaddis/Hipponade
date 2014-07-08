@@ -7,7 +7,7 @@ class News {
     User   author
 
     static hasMany = [tags: Tag]
-    static belongsTo = [Tag, User]
+//    static belongsTo = [Tag, User]
 
     static constraints = {
         headline blank: false, maxSize: 140, nullable: false

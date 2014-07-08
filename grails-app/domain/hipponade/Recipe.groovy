@@ -7,7 +7,7 @@ class Recipe {
     String instructions
     NutritionFact nutrition
 
-    static belongsTo = [Tag]
+//    static belongsTo = [Tag]
     static hasMany = [tags: Tag, ingredients:RecipeIngredient, images: Image]
 //    static hasOne = [nutrition: NutritionFact]
 

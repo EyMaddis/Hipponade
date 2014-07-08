@@ -7,7 +7,8 @@ class Product {
     String css
 
 //    static belongsTo = [Tag]
-    static hasMany = [images: Image, ingredients: Ingredient, store: Store, tags: Tag, recipes: Recipe] // Siegel wird in Tags gespeichert und bei der Seitengenerierung dynamisch abgefragt
+    // Siegel (z.B: Bio) wird in Tags gespeichert und bei der Seitengenerierung dynamisch abgefragt
+    static hasMany = [images: Image, ingredients: Ingredient, store: Store, tags: Tag, recipes: Recipe]
     NutritionFact nutrition
 
     static constraints = {

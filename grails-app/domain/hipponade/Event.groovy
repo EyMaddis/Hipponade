@@ -7,7 +7,7 @@ class Event{
     Date   date
     Date   dateCreated = new Date()
 
-    static belongsTo = [Image, Tag]
+//    static belongsTo = [Image, Tag]
     static hasMany = [images: Image, tags: Tag]
 
     static constraints = {
