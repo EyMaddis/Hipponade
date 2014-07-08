@@ -12,16 +12,21 @@ class BootStrap {
         def User user = new User(username: "test", password: "test")
         user.save(flush: true, failOnError: true)
 
+        def Product prod = new Product(name: "Colanade", shortDescription: "Nullam id dolor id nibh ultricies vehicula ut id elit.")
+
         new File( './grails-app/assets/images/products' ).eachFile() {
             f ->
                 // imports images
                 def img = new Image(fileName: f.getName())
                 img.save(flush: true, failOnError: true)
+                if (f.getName().equals("fritz-kola-breit.png")){
+                    prod.addToImages(img)
+                }
 
         }
-        def img = Image.getAt(fileName: "fritz-kola-breit.png")
-        def Product prod = new Product(name: "Colanade", shortDescription: "Nullam id dolor id nibh ultricies vehicula ut id elit.")
-        prod.addToImages(img)
+
+
+
         prod.save(flush: true, failOnError: true)
 
         def e = new Event(name:"Hipponade bei Strandparty", description:"Heute geht die Strandparty mit HIPPONADE ab!!" +
