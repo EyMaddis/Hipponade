@@ -21,7 +21,13 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="myFile" title="${message(code: 'image.fileName.label', default: 'My File')}" />
+						<g:sortableColumn property="fileName" title="${message(code: 'image.fileName.label', default: 'File Name')}" />
+					
+						<th><g:message code="image.recipe.label" default="Recipe" /></th>
+					
+						<th><g:message code="image.event.label" default="Event" /></th>
+					
+						<th><g:message code="image.product.label" default="Product" /></th>
 					
 					</tr>
 				</thead>
@@ -30,6 +36,12 @@
 					<tr >
 					
 						<td><g:link action="show" id="${imageInstance.id}">${fieldValue(bean: imageInstance, field: "fileName")}</g:link></td>
+					
+						<td>${fieldValue(bean: imageInstance, field: "recipe")}</td>
+					
+						<td>${fieldValue(bean: imageInstance, field: "event")}</td>
+					
+						<td>${fieldValue(bean: imageInstance, field: "product")}</td>
 					
 					</tr>
 				</g:each>

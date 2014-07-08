@@ -10,7 +10,22 @@ class ImageController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    def upload(Image imageInstance) {
+    def index(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        respond Image.list(params), model:[imageInstanceCount: Image.count()]
+    }
+
+    def show(Image imageInstance) {
+        respond imageInstance
+    }
+
+    def create() {
+        respond new Image(params)
+    }
+
+    @Transactional
+    def save(Image imageInstance) {
+
         def f = request.getFile('myFile')
 
         def end = FilenameUtils.getExtension(f.getOriginalFilename())
@@ -24,48 +39,24 @@ class ImageController {
         def String n = params.fileName ?: new Date().getTime().toString()
         n += '.'
         n += end
-
-        def file = new File('./grails-app/assets/images/products/' + n)
-        file.createNewFile()
-        f.transferTo(file)
         imageInstance.setFileName(n)
-        imageInstance.save(flush: true)
+        imageInstance.save()
 
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'Image.label', default: 'Image'), imageInstance.id])
-                redirect imageInstance
-            }
-            '*' { respond imageInstance, [status: OK] }
-        }
-    }
-
-    def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        respond Image.list(params), model: [imageInstanceCount: Image.count()]
-    }
-
-    def show(Image imageInstance) {
-        respond imageInstance
-    }
-
-    def create() {
-        respond new Image(params)
-    }
-
-    @Transactional
-    def save(Image imageInstance) {
         if (imageInstance == null) {
             notFound()
             return
         }
 
         if (imageInstance.hasErrors()) {
-            respond imageInstance.errors, view: 'create'
+            respond imageInstance.errors, view:'create'
             return
         }
 
-        imageInstance.save flush: true
+        def file = new File('./grails-app/assets/images/products/' + n)
+        file.createNewFile()
+        f.transferTo(file)
+
+        imageInstance.save flush:true
 
         request.withFormat {
             form multipartForm {
@@ -88,18 +79,18 @@ class ImageController {
         }
 
         if (imageInstance.hasErrors()) {
-            respond imageInstance.errors, view: 'edit'
+            respond imageInstance.errors, view:'edit'
             return
         }
 
-        imageInstance.save flush: true
+        imageInstance.save flush:true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'Image.label', default: 'Image'), imageInstance.id])
                 redirect imageInstance
             }
-            '*' { respond imageInstance, [status: OK] }
+            '*'{ respond imageInstance, [status: OK] }
         }
     }
 
@@ -111,15 +102,14 @@ class ImageController {
             return
         }
 
-
-        imageInstance.delete flush: true
+        imageInstance.delete flush:true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'Image.label', default: 'Image'), imageInstance.id])
-                redirect action: "index", method: "GET"
+                redirect action:"index", method:"GET"
             }
-            '*' { render status: NO_CONTENT }
+            '*'{ render status: NO_CONTENT }
         }
     }
 
@@ -129,7 +119,7 @@ class ImageController {
                 flash.message = message(code: 'default.not.found.message', args: [message(code: 'image.label', default: 'Image'), params.id])
                 redirect action: "index", method: "GET"
             }
-            '*' { render status: NOT_FOUND }
+            '*'{ render status: NOT_FOUND }
         }
     }
 }

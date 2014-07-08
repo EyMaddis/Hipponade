@@ -21,7 +21,7 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-			<g:form url="[resource:imageInstance, action:'upload']"  enctype="multipart/form-data" role="form" class="form-horizontal">
+			<g:form url="[resource:imageInstance, action:'save']"  enctype="multipart/form-data" role="form" class="form-horizontal">
 				<fieldset>
 					<g:render template="form"/>
 				</fieldset>

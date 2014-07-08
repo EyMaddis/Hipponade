@@ -21,13 +21,13 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="css" title="${message(code: 'product.css.label', default: 'Css')}" />
+						<g:sortableColumn property="name" title="${message(code: 'product.name.label', default: 'Name')}" />
 					
 						<g:sortableColumn property="description" title="${message(code: 'product.description.label', default: 'Description')}" />
 					
-						<th><g:message code="product.image.label" default="Image" /></th>
+						<g:sortableColumn property="css" title="${message(code: 'product.css.label', default: 'Css')}" />
 					
-						<g:sortableColumn property="name" title="${message(code: 'product.name.label', default: 'Name')}" />
+						<th><g:message code="product.nutrition.label" default="Nutrition" /></th>
 					
 					</tr>
 				</thead>
@@ -35,13 +35,13 @@
 				<g:each in="${productInstanceList}" status="i" var="productInstance">
 					<tr >
 					
-						<td><g:link action="show" id="${productInstance.id}">${fieldValue(bean: productInstance, field: "css")}</g:link></td>
+						<td><g:link action="show" id="${productInstance.id}">${fieldValue(bean: productInstance, field: "name")}</g:link></td>
 					
 						<td>${fieldValue(bean: productInstance, field: "description")}</td>
 					
-						<td>${fieldValue(bean: productInstance, field: "image")}</td>
+						<td>${fieldValue(bean: productInstance, field: "css")}</td>
 					
-						<td>${fieldValue(bean: productInstance, field: "name")}</td>
+						<td>${fieldValue(bean: productInstance, field: "nutrition")}</td>
 					
 					</tr>
 				</g:each>
