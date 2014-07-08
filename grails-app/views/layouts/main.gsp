@@ -26,7 +26,7 @@
                         <g:navigationLink controller="news">Neuigkeiten</g:navigationLink>
                         <g:navigationLink controller="story">Geschichte</g:navigationLink>
                         <g:navigationLink controller="recipe">Rezepte</g:navigationLink>
-                        <g:navigationLink controller="product">Produkte</g:navigationLink>
+                        <g:navigationLink controller="product">Getränke</g:navigationLink>
                         <g:navigationLink controller="about">Über Uns</g:navigationLink>
                     </ul>
                     <form class="navbar-form navbar-right" role="search">
