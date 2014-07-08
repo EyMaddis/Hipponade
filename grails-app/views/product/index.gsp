@@ -14,7 +14,7 @@
         <g:each in="${productInstanceList}" status="i" var="productInstance">
 
             <div class="col-md-3">
-                <img class="img-responsive" src="/Hipponade/assets/products/fritz-kola-breit.png" alt="...">
+                <img class="img-responsive" src="/Hipponade/assets/products/${productInstance?.images[0].fileName}" alt="...">
 
                 <div class="caption">
 
