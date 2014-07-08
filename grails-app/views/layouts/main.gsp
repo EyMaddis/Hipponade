@@ -36,11 +36,9 @@
         </div>
         <hr class="divider">
         <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-2">Impressum</div>
+            <div class="col-md-2 col-md-offset-3">Impressum</div>
             <div class="col-md-2">Datenschutz</div>
             <div class="col-md-2">Nutzungsbedingungen</div>
-            <div class="col-md-3"></div>
         </div>
     </footer>
 </div>
