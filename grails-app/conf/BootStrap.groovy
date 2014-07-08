@@ -19,7 +19,7 @@ class BootStrap {
                 img.save(flush: true, failOnError: true)
 
         }
-        def img = Image.getAt(fileName: "fritz-kola-breit.png")
+        def img = Image.findByFileName("fritz-kola-breit.png")
         def Product prod = new Product(name: "Colanade", shortDescription: "Nullam id dolor id nibh ultricies vehicula ut id elit.")
         prod.addToImages(img)
         prod.save(flush: true, failOnError: true)
