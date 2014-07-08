@@ -6,6 +6,7 @@ class Event{
     String location
     Date   date
     Date   dateCreated = new Date()
+    User   author
 
 //    static belongsTo = [Image, Tag]
     static hasMany = [images: Image, tags: Tag]
@@ -15,6 +16,7 @@ class Event{
         description nullable: false, blank: false
         location widget: 'textarea'
         date nullable: false
-        dateCreated display: false, editable: false, max: new Date() // max today
+        dateCreated display: false, editable: false
+
     }
 }

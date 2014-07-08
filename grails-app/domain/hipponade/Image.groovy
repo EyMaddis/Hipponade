@@ -2,11 +2,17 @@ package hipponade
 
 class Image {
     String fileName
-    //static belongsTo = [Product, Recipe]
-   // static hasOne = [recipe: Recipe, event: Event, product: Product]
+    Recipe recipe
+    Event event
+    Product product
+
+    static belongsTo = [Product, Recipe]
     static constraints = {
         // Limit upload file size to 2MB
         fileName blank: false, nullable: false
+        recipe nullable: true
+        event nullable: true
+        product nullable: true
     }
 
     def beforeDelete() {
