@@ -6,9 +6,9 @@ class Product {
     String shortDescription // Kurzbeschreibung für Übersichtsseite
     String css
 
-    static belongsTo = [Tag]
+//    static belongsTo = [Tag]
     static hasMany = [images: Image, ingredients: Ingredient, store: Store, tags: Tag, recipes: Recipe] // Siegel wird in Tags gespeichert und bei der Seitengenerierung dynamisch abgefragt
-    static hasOne = [nutrition: NutritionFact]
+    NutritionFact nutrition
 
     static constraints = {
         name unique: true, nullable: false, blank: false, maxSize: 100

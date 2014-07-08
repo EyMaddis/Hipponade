@@ -5,10 +5,11 @@ class Recipe {
     String name
     String shortDescription
     String instructions
+    NutritionFact nutrition
 
     static belongsTo = [Tag]
     static hasMany = [tags: Tag, ingredients:RecipeIngredient, images: Image]
-    static hasOne = [nutrition: NutritionFact]
+//    static hasOne = [nutrition: NutritionFact]
 
     static constraints = {
         name blank: false, nullable: false, unique: true

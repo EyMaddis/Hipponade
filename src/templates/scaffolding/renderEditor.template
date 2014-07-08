@@ -68,11 +68,11 @@
 				sb << '/>'
 			} else {
 				if (cp.password) {
-					sb << '<g:field type="password"'
+					sb << '<g:field type="password" class="form-control"'
 				} else if (cp.url) {
-					sb << '<g:field type="url"'
+					sb << '<g:field type="url" class="form-control"'
 				} else if (cp.email) {
-					sb << '<g:field type="email"'
+					sb << '<g:field type="email" class="form-control"'
 				} else {
 					sb << '<g:textField class="form-control"'
 				}
@@ -153,9 +153,9 @@
     private renderNumberEditor(domainClass, property) {
         if (!cp) {
             if (property.type == Byte) {
-                return "<g:select name=\"${property.name}\" from=\"\${-128..127}\" class=\"range\" value=\"\${fieldValue(bean: ${domainInstance}, field: '${property.name}')}\" />"
+                return "<g:select name=\"${property.name}\" from=\"\${-128..127}\" class=\"range form-control\" value=\"\${fieldValue(bean: ${domainInstance}, field: '${property.name}')}\" />"
             } else {
-                return "<g:field type=\"number\" name=\"${property.name}\" value=\"\${${domainInstance}.${property.name}}\" />"
+                return "<g:field type=\"number\" class=\"form-control\" name=\"${property.name}\" value=\"\${${domainInstance}.${property.name}}\" />"
             }
         } else {
 	        def sb = new StringBuilder()
@@ -181,7 +181,7 @@
 				if (property.type in [float, double, Float, Double, BigDecimal]) {
 					sb << ' value="${' << "fieldValue(bean: ${domainInstance}, field: '${property.name}')" << '}"'
 				} else {
-					sb << ' type="number"'
+					sb << ' type="number" class="form-control"'
 					if (cp.min != null) sb << ' min="' << cp.min << '"'
 					if (cp.max != null) sb << ' max="' << cp.max << '"'
 					sb << ' value="${' << domainInstance << '.' << property.name << '}"'
