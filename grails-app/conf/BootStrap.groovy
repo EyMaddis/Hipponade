@@ -1,6 +1,9 @@
 import hipponade.Image
 import hipponade.Product
 import hipponade.User
+import hipponade.Event
+import hipponade.Tag
+import hipponade.Image
 
 class BootStrap {
 
@@ -19,6 +22,23 @@ class BootStrap {
                 img.save(flush: true, failOnError: true)
 
         }
+
+        def e = new Event(name:"Hipponade bei Strandparty", description:"Heute geht die Strandparty mit HIPPONADE ab!!" +
+                " Seid dabei, wenn wir mit den neusten Hits den Strand unsicher machen. Freut euch auf HIPPONADE und jede Menge Spaß!!",
+                location: "Strand Brasilien", date: new Date());
+        if(e.validate()) e.save()
+        def t = new Tag(label: "erfrischend");
+        if(t.validate()) {
+            t.save(flush: true)
+        }
+        def im = new Image(fileName:"mischmasch-breit.png")
+        if(im.validate()) {
+            im.save(flush: true)
+        } else {
+            println(im.hasErrors())
+        }
+        t.addToEvents(e)
+        t.save(failOnError: true, flush: true)
     }
     def destroy = {
     }
