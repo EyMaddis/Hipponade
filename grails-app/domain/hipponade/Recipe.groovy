@@ -17,5 +17,9 @@ class Recipe {
         nutrition nullable: true
         images nullable: true
     }
+
+    def beforeDelete = {
+        nutrition?.delete(flush: true)
+    }
 }
 

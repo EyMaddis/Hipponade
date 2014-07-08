@@ -24,6 +24,17 @@
     </div>
 </div>
 
+<div class="form-group fieldcontain ${hasErrors(bean: productInstance, field: 'shortDescription', 'error')} ">
+	<label class="col-sm-2 control-label" for="shortDescription">
+		<g:message code="product.shortDescription.label" default="Short Description" />
+		
+	</label>
+    <div class="col-sm-10">
+        <g:textField class="form-control" name="shortDescription" maxlength="160" value="${productInstance?.shortDescription}"/>
+
+    </div>
+</div>
+
 <div class="form-group fieldcontain ${hasErrors(bean: productInstance, field: 'css', 'error')} ">
 	<label class="col-sm-2 control-label" for="css">
 		<g:message code="product.css.label" default="Css" />
@@ -57,6 +68,17 @@
     </div>
 </div>
 
+<div class="form-group fieldcontain ${hasErrors(bean: productInstance, field: 'nutrition', 'error')} ">
+	<label class="col-sm-2 control-label" for="nutrition">
+		<g:message code="product.nutrition.label" default="Nutrition" />
+		
+	</label>
+    <div class="col-sm-10">
+        <g:select id="nutrition" name="nutrition.id" from="${hipponade.NutritionFact.list()}" optionKey="id" value="${productInstance?.nutrition?.id}" class="many-to-one form-control" noSelection="['null': '']"/>
+
+    </div>
+</div>
+
 <div class="form-group fieldcontain ${hasErrors(bean: productInstance, field: 'images', 'error')} ">
 	<label class="col-sm-2 control-label" for="images">
 		<g:message code="product.images.label" default="Images" />
@@ -84,17 +106,6 @@
 	</label>
     <div class="col-sm-10">
         <g:select name="ingredients" from="${hipponade.Ingredient.list()}" multiple="multiple" optionKey="id" size="5" value="${productInstance?.ingredients*.id}" class="many-to-many form-control"/>
-
-    </div>
-</div>
-
-<div class="form-group fieldcontain ${hasErrors(bean: productInstance, field: 'nutrition', 'error')} required">
-	<label class="col-sm-2 control-label" for="nutrition">
-		<g:message code="product.nutrition.label" default="Nutrition" />
-		<span class="required-indicator">*</span>
-	</label>
-    <div class="col-sm-10">
-        <g:select id="nutrition" name="nutrition.id" from="${hipponade.NutritionFact.list()}" optionKey="id" required="" value="${productInstance?.nutrition?.id}" class="many-to-one form-control"/>
 
     </div>
 </div>

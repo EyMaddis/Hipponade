@@ -25,6 +25,8 @@
 					
 						<g:sortableColumn property="description" title="${message(code: 'product.description.label', default: 'Description')}" />
 					
+						<g:sortableColumn property="shortDescription" title="${message(code: 'product.shortDescription.label', default: 'Short Description')}" />
+					
 						<g:sortableColumn property="css" title="${message(code: 'product.css.label', default: 'Css')}" />
 					
 						<th><g:message code="product.nutrition.label" default="Nutrition" /></th>
@@ -38,6 +40,8 @@
 						<td><g:link action="show" id="${productInstance.id}">${fieldValue(bean: productInstance, field: "name")}</g:link></td>
 					
 						<td>${fieldValue(bean: productInstance, field: "description")}</td>
+					
+						<td>${fieldValue(bean: productInstance, field: "shortDescription")}</td>
 					
 						<td>${fieldValue(bean: productInstance, field: "css")}</td>
 					

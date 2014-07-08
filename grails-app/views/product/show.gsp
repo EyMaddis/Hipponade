@@ -37,6 +37,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${productInstance?.shortDescription}">
+				<li class="fieldcontain">
+					<span id="shortDescription-label" class="property-label"><g:message code="product.shortDescription.label" default="Short Description" /></span>
+					
+						<span class="property-value" aria-labelledby="shortDescription-label"><g:fieldValue bean="${productInstance}" field="shortDescription"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${productInstance?.css}">
 				<li class="fieldcontain">
 					<span id="css-label" class="property-label"><g:message code="product.css.label" default="Css" /></span>
@@ -68,6 +77,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${productInstance?.nutrition}">
+				<li class="fieldcontain">
+					<span id="nutrition-label" class="property-label"><g:message code="product.nutrition.label" default="Nutrition" /></span>
+					
+						<span class="property-value" aria-labelledby="nutrition-label"><g:link controller="nutritionFact" action="show" id="${productInstance?.nutrition?.id}">${productInstance?.nutrition?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${productInstance?.images}">
 				<li class="fieldcontain">
 					<span id="images-label" class="property-label"><g:message code="product.images.label" default="Images" /></span>
@@ -86,15 +104,6 @@
 						<g:each in="${productInstance.ingredients}" var="i">
 						<span class="property-value" aria-labelledby="ingredients-label"><g:link controller="ingredient" action="show" id="${i.id}">${i?.encodeAsHTML()}</g:link></span>
 						</g:each>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${productInstance?.nutrition}">
-				<li class="fieldcontain">
-					<span id="nutrition-label" class="property-label"><g:message code="product.nutrition.label" default="Nutrition" /></span>
-					
-						<span class="property-value" aria-labelledby="nutrition-label"><g:link controller="nutritionFact" action="show" id="${productInstance?.nutrition?.id}">${productInstance?.nutrition?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

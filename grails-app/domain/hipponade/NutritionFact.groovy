@@ -7,11 +7,9 @@ class NutritionFact {
     float carbs
     int   calories
     float fiber
-
     Product product
-    Recipe recipe
+    Recipe  recipe
 
-    static belongsTo = [Product, Recipe]
     //static hasOne = [product: Product, recipe: Recipe]
 
     static constraints = {
@@ -20,7 +18,10 @@ class NutritionFact {
         carbs nullable: false
         fiber nullable: false
         fat nullable: false
-        product nullable: true
+        product(nullable: true, validator: {val, obj -> !(val && obj.recipe)}) // Darf nur einem von beiden zugeordnet sein
         recipe nullable: true
     }
+
+
+
 }
