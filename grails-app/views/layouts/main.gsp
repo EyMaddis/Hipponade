@@ -7,14 +7,14 @@
 </head>
 <body class="main">
 <g:render template="/layouts/navigation" />
-<div class="container">
+
     <g:if test="${flash.message}">
         <div class="alert alert-warning alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             ${flash.message}
         </div>
     </g:if>
-    <g:layoutBody/>
+    <g:layoutBody/><div class="container">
     <footer class="marketing">
         <div class="row">
         <div class="col-md-3"><h5>Facebook</h5><p>

@@ -24,36 +24,6 @@
     </div>
 </div>
 
-<div class="form-group fieldcontain ${hasErrors(bean: imageInstance, field: 'recipe', 'error')} ">
-	<label class="col-sm-2 control-label" for="recipe">
-		<g:message code="image.recipe.label" default="Recipe" />
-		
-	</label>
-    <div class="col-sm-10">
-        <g:select id="recipe" name="recipe.id" from="${hipponade.Recipe.list()}" optionKey="id" value="${imageInstance?.recipe?.id}" class="many-to-one form-control" noSelection="['null': '']"/>
 
-    </div>
-</div>
 
-<div class="form-group fieldcontain ${hasErrors(bean: imageInstance, field: 'event', 'error')} ">
-	<label class="col-sm-2 control-label" for="event">
-		<g:message code="image.event.label" default="Event" />
-		
-	</label>
-    <div class="col-sm-10">
-        <g:select id="event" name="event.id" from="${hipponade.Event.list()}" optionKey="id" value="${imageInstance?.event?.id}" class="many-to-one form-control" noSelection="['null': '']"/>
-
-    </div>
-</div>
-
-<div class="form-group fieldcontain ${hasErrors(bean: imageInstance, field: 'product', 'error')} ">
-	<label class="col-sm-2 control-label" for="product">
-		<g:message code="image.product.label" default="Product" />
-		
-	</label>
-    <div class="col-sm-10">
-        <g:select id="product" name="product.id" from="${hipponade.Product.list()}" optionKey="id" value="${imageInstance?.product?.id}" class="many-to-one form-control" noSelection="['null': '']"/>
-
-    </div>
-</div>
 

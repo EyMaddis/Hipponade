@@ -85,7 +85,7 @@
 		
 	</label>
     <div class="col-sm-10">
-        <g:select name="images" from="${hipponade.Image.list()}" multiple="multiple" optionKey="id" optionValue="fileName" size="5" value="${productInstance?.images*.id}" class="many-to-many form-control"/>
+        <g:select name="images" from="${hipponade.Image.list()}" multiple="multiple" optionKey="id" size="5" value="${productInstance?.images*.id}" class="many-to-many form-control"/>
 
     </div>
 </div>

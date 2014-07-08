@@ -8,43 +8,58 @@
 </head>
 
 <body>
-<div id="list-product" class="content scaffold-list marketing" role="main">
-    <p class="lead">Alle Getränke im Überblick</p>
-    <div class="row">
-        <g:each in="${productInstanceList}" status="i" var="productInstance">
+<div class="container">
+    <div id="list-product" class="content scaffold-list marketing" role="main">
+        <p class="lead">Alle Getränke im Überblick</p>
 
-            <div class="col-md-3">
-                <img class="img-responsive" src="/Hipponade/assets/products/${productInstance?.images[0].fileName}" alt="...">
+        <div class="row">
+            <g:each in="${productInstanceList}" status="i" var="productInstance">
 
-                <div class="caption">
+                <div class="col-md-3">
+                    <g:link action="show"
+                            id="${productInstance.id}"><img class="img-responsive"
+                                                            src="/Hipponade/assets/products/${productInstance?.images[0].fileName}"
+                                                            alt="..."></g:link>
 
-                    <h4><g:link action="show"
-                                id="${productInstance.id}">${fieldValue(bean: productInstance, field: "name")}</g:link></h4>
+                    <div class="caption">
 
-                    <p>${fieldValue(bean: productInstance, field: "shortDescription")}</p>
+                        <h4><g:link action="show"
+                                    id="${productInstance.id}">${fieldValue(bean: productInstance, field: "name")}</g:link></h4>
+
+                        <p>${fieldValue(bean: productInstance, field: "shortDescription")}</p>
+                    </div>
                 </div>
+            </g:each>
+
+        </div>
+
+        <div class="row schnack">
+            <div class="col-md-4">
+                <p class="lead">Der Umwelt zuliebe</p>
+
+                <p class="blocktext">Unsere Getränke werden aus Zutaten hergestellt, die kontrolliert angebaut wurden.
+                So achten wir auf Nachhaltigkeit und die Umwelt.
+                Wir wählen gezielt unsere Partner und achten auf deren Produktionsprozesse.
+                Biologischer Anbau steht hier an erster Stelle.
+                Somit sind unsere Produkte frei von Pestiziden und jeglichen Sachen, die dir Sorgen bereiten können.</p>
             </div>
-        </g:each>
-
-    </div>
-
-    <div class="row schnack">
-        <div class="col-md-4">
-            <p class="lead">Getränke aus biologischen Anbau</p>
-
-            <p class="blocktext">Unsere Getränke werden aus Zutaten hergestellt, die kontrolliert angebaut wurden. So achten wir auf Nachhaltigkeit und die Umwelt.</p>
-        </div>
 
 
-        <div class="col-md-4">
-            <p class="lead">Mit reinem Gewissen genießen</p>
-            <p class="blocktext">Alle Hipponaden werden aus frischem Obst und Gemüse hergestellt.
-            So kannst du dir sicher sein, dass du etwas gesundes trinkst.</p>
-        </div>
+            <div class="col-md-4">
+                <p class="lead">Mit reinem Gewissen genießen</p>
 
-        <div class="col-md-4">
-            <p class="lead">Alle guten Dinge sind Drei</p>
-            <p class="blocktext">Kommt noch</p>
+                <p class="blocktext">Alle Hipponaden werden aus frischem Obst und Gemüse hergestellt.
+                So kannst du dir sicher sein, dass du bei uns nur das beste bekommst.
+                Des Weiteren achten wir für dich darauf, dass alle Zutaten das FairTrade-Siegel tragen.
+                Du kannst also, ohne schlechtes Gewissen, deine Hipponade genießen.
+                Selbst exotische Zutaten kommen nur von Plantagen, die zu fairen Konditionen Arbeiter beschäftigen.</p>
+            </div>
+
+            <div class="col-md-4">
+                <p class="lead">Alle guten Dinge sind Drei</p>
+
+                <p class="blocktext">Kommt noch</p>
+            </div>
         </div>
     </div>
 </div>
