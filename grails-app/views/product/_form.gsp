@@ -85,16 +85,7 @@
 		
 	</label>
     <div class="col-sm-10">
-        
-<ul class="one-to-many">
-<g:each in="${productInstance?.images?}" var="i">
-    <li><g:link controller="image" action="show" id="${i.id}">${i?.encodeAsHTML()}</g:link></li>
-</g:each>
-<li class="add">
-<g:link controller="image" action="create" params="['product.id': productInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'image.label', default: 'Image')])}</g:link>
-</li>
-</ul>
-
+        <g:select name="images" from="${hipponade.Image.list()}" multiple="multiple" optionKey="id" size="5" value="${productInstance?.images*.id}" class="many-to-many form-control"/>
 
     </div>
 </div>
@@ -116,7 +107,7 @@
 		
 	</label>
     <div class="col-sm-10">
-        
+        <g:select name="tags" from="${hipponade.Tag.list()}" multiple="multiple" optionKey="id" size="5" value="${productInstance?.tags*.id}" class="many-to-many form-control"/>
 
     </div>
 </div>
