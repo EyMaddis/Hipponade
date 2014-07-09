@@ -86,12 +86,12 @@ class BootStrap {
         def coconutCream = new Ingredient(name: "Kokossirup").save(failOnError: true, flush: true)
 
         //RecipeIngredients
-        def recI1 = new RecipeIngredient(ingredient: sugar, amount: 2, type: "Tasse").save(failOnError: true, flush: true)
-        def recI2 = new RecipeIngredient(ingredient: flour, amount: 3, type: "Tasse").save(failOnError: true, flush: true)
-        def recI3 = new RecipeIngredient(ingredient: fat, amount: 1, type: "Tasse").save(failOnError: true, flush: true)
+        def recI1 = new RecipeIngredient(ingredient: sugar, amount: 2, type: "Tasse(n)").save(failOnError: true, flush: true)
+        def recI2 = new RecipeIngredient(ingredient: flour, amount: 3, type: "Tasse(n)").save(failOnError: true, flush: true)
+        def recI3 = new RecipeIngredient(ingredient: fat, amount: 1, type: "Tasse(n)").save(failOnError: true, flush: true)
         def recI4 = new RecipeIngredient(ingredient: vanSugar, amount: 1, type: "Päckchen").save(failOnError: true, flush: true)
         def recI5 = new RecipeIngredient(ingredient: natron, amount: 1, type: "Päckchen").save(failOnError: true, flush: true)
-        def recI6 = new RecipeIngredient(ingredient: egg, amount: 4, type: "g").save(failOnError: true, flush: true)
+        def recI6 = new RecipeIngredient(ingredient: egg, amount: 4, type: "Stück(e)").save(failOnError: true, flush: true)
         def recI7 = new RecipeIngredient(ingredient: salt, amount: 1, type: "Päckchen").save(failOnError: true, flush: true)
         def recl9 = new RecipeIngredient(ingredient: rum, amount: 6, type: "cl")
         def recl10 = new RecipeIngredient(ingredient: cream, amount: 2, type: "cl")
@@ -114,6 +114,7 @@ class BootStrap {
         rec.addToTags(lecker)
         rec.addToTags(einfach)
         rec.nutrition = recnuts
+        rec.addToImages(Image.findByFileName("hipponadenkuchen.jpg"))
         rec.save(failOnError: true, flush: true)
 
         def hipponada = new Recipe(name: "Pina Hipponada", shortDescription: "leckerer Cocktail mit Hipponade!",
