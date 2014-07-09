@@ -3,23 +3,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="layout" content="main">
+    <meta name="layout" content="fullpage">
     <g:set var="entityName" value="${message(code: 'product.label', default: 'Product')}"/>
     <title><g:message code="default.show.label" args="[entityName]"/></title>
 </head>
 
 <body>
 <div class="jumbotron marketing">
-            <img src="/Hipponade/assets/products/${productInstance?.images[0].fileName}" alt="...">
+            <img src="${createLink(uri: '/')}assets/products/${productInstance?.images[0].fileName}" alt="...">
 </div>
 <div class="container marketing">
     <div id="show-product" class="content scaffold-show" role="main">
 
-        <p class="lead biglead">${productInstance?.name}</p>
+        <h1 class="lead biglead">
+            ${productInstance?.name}
+        </h1>
 
-                <p class="blocktext">
-                    ${productInstance?.description}
-                </p>
+        <p class="blocktext">
+            ${productInstance?.description}
+        </p>
 
 
         <div class="row">
