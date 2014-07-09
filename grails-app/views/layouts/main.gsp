@@ -29,7 +29,7 @@
             <p><a href="http://www.youtube.com">Unser Kanal</a></p>
         </div>
         <div class="col-md-3">
-            <p class="lead">Externe</p>
+            <h5>Externe</h5>
             <p><g:navigationLink controller="store" action="index" linkOnly="true">Großhändler</g:navigationLink></p>
         </div>
         </div>

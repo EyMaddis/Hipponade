@@ -19,13 +19,13 @@
                  </g:link>
 
                 <div class="caption">
-                    <h1 class="lead">
+                    <h2>
                         <g:link action="show" id="${productInstance.id}">
                             ${productInstance.name}
                         </g:link>
-                    </h1>
+                    </h2>
 
-                    <p>
+                    <p class="lead">
                         ${fieldValue(bean: productInstance, field: "shortDescription")}
                     </p>
                 </div>
@@ -38,9 +38,20 @@
     </sec:ifLoggedIn>
     <div class="row schnack">
         <div class="col-md-4">
-            <p class="lead">Der Umwelt zuliebe</p>
+            <h2>Der Umwelt zuliebe</h2>
+        </div>
+        <div class="col-md-4">
+            <h2>Mit reinem Gewissen genießen</h2>
+        </div>
+        <div class="col-md-4">
+            <h2>Alle guten Dinge sind Drei</h2>
+        </div>
+    </div>
+    <div class="row schnack">
+        <div class="col-md-4">
 
-            <p class="blocktext">Unsere Getränke werden aus Zutaten hergestellt, die kontrolliert angebaut wurden.
+
+            <p class="blocktext lead">Unsere Getränke werden aus Zutaten hergestellt, die kontrolliert angebaut wurden.
             So achten wir auf Nachhaltigkeit und die Umwelt.
             Wir wählen gezielt unsere Partner und achten auf deren Produktionsprozesse.
             Biologischer Anbau steht hier an erster Stelle.
@@ -49,9 +60,8 @@
 
 
         <div class="col-md-4">
-            <p class="lead">Mit reinem Gewissen genießen</p>
 
-            <p class="blocktext">Alle Hipponaden werden aus frischem Obst und Gemüse hergestellt.
+            <p class="lead blocktext">Alle Hipponaden werden aus frischem Obst und Gemüse hergestellt.
             So kannst du dir sicher sein, dass du bei uns nur das beste bekommst.
             Des Weiteren achten wir für dich darauf, dass alle Zutaten das FairTrade-Siegel tragen.
             Du kannst also, ohne schlechtes Gewissen, deine Hipponade genießen.
@@ -59,9 +69,8 @@
         </div>
 
         <div class="col-md-4">
-            <p class="lead">Alle guten Dinge sind Drei</p>
 
-            <p class="blocktext">Kommt noch</p>
+            <p class="lead blocktext">Kommt noch</p>
         </div>
     </div>
 </div>

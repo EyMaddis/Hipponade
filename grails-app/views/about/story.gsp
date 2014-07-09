@@ -23,7 +23,7 @@
             <h2 class="featurette-heading">Der frühe Vogel.</h2>
             <p class="lead">
                 Bereits als kleiner Mann war Hannes Breitenstätter schon sehr eigenständig und wollte stets seine Ideen verwirklichen.
-                Er wuchs auf einem Bio-Bauernhof auf, welcher nur Getreide anbaute und einen Streichenzoo betrieb.
+                Er wuchs auf einem Bio-Bauernhof auf, welcher nur Getreide anbaute und einen Streichelzoo betrieb.
             </p>
             <p class="lead">
                 Dort entdeckte Hannes seine Liebe und zur Natur.
