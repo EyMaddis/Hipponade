@@ -119,23 +119,23 @@ class BootStrap {
 
 
         // Stores
-        def Store s1 = new Store(name: "Sky Coop", street1: "Weißenburgstr. 15", city: "Kiel", zipCode: 24116, longitude: 50.0, latitude: 10.0)
+        def Store s1 = new Store(name: "Sky Coop", street1: "Weißenburgstr. 15", city: "Kiel", zipCode: 24116, longitude: 10.1184345, latitude: 54.3252079, website: "http://www.sky.coop")
         s1.save(flush: true, failOnError: true)
-        def Store s2 = new Store(name: "Mensa Uni Kiel", street1: "Christian-Albrechts-Platz 4", city: "Kiel", zipCode: 24118, longitude: 50.0, latitude: 10.0)
+        def Store s2 = new Store(name: "Mensa Uni Kiel", street1: "Christian-Albrechts-Platz 4", city: "Kiel", zipCode: 24118, longitude: 10.1226603, latitude: 54.3375707, website: "http://www.studentenwerk.sh")
         s2.save(flush: true, failOnError: true)
-        def Store s3 = new Store(name: "Lidl", street1: "Kirchhofallee 68", city: "Kiel", zipCode: 24114, longitude: 50.0, latitude: 10.0)
+        def Store s3 = new Store(name: "Lidl", street1: "Kirchhofallee 68", city: "Kiel", zipCode: 24114, longitude: 10.1194585, latitude: 54.3161869, website: "http://www.lidl.de")
         s3.save(flush: true, failOnError: true)
-        def Store s4 = new Store(name: "Penny", street1: "Holtenauer Straße 84", city: "Kiel", zipCode: 24105, longitude: 50.0, latitude: 10.0)
+        def Store s4 = new Store(name: "Penny", street1: "Holtenauer Straße 84", city: "Kiel", zipCode: 24105, longitude: 10.13323, latitude: 54.33357, website: "http://www.penny.de")
         s4.save(flush: true, failOnError: true)
-        def Store s5 = new Store(name: "real,- SB Warenhaus", street1: "Mergenthalerstraße 21", city: "Schwentinental-Raisdorf", zipCode: 24223, longitude: 50.0, latitude: 10.0)
+        def Store s5 = new Store(name: "real,- SB Warenhaus", street1: "Mergenthalerstraße 21", city: "Schwentinental-Raisdorf", zipCode: 24223, longitude: 10.2231331, latitude: 54.2879833, website: "http://www.real.de")
         s5.save(flush: true, failOnError: true)
-        def Store s6 = new Store(name: "Rewe City", street1: "Wilhelminenstraße 10", city: "Kiel", zipCode: 24103, longitude: 50.0, latitude: 10.0)
+        def Store s6 = new Store(name: "Rewe City", street1: "Wilhelminenstraße 10", city: "Kiel", zipCode: 24103, longitude: 10.1334313, latitude: 54.3283649, website:"http://www.rewe.de")
         s6.save(flush: true, failOnError: true)
-        def Store s7 = new Store(name: "E Neukauf Kiel", street1: "Sophienhof 20", city: "Kiel", zipCode: 24103, longitude: 50.0, latitude: 10.0)
+        def Store s7 = new Store(name: "E Neukauf Kiel", street1: "Sophienhof 20", city: "Kiel", zipCode: 24103, longitude: 10.131532, latitude: 54.316668, website: "http://www.edeka.de")
         s7.save(flush: true, failOnError: true)
-        def Store s8 = new Store(name: "Aldi", street1: "Kirchhofallee 25", city: "Kiel", zipCode: 24103, longitude: 50.0, latitude: 10.0)
+        def Store s8 = new Store(name: "Aldi", street1: "Kirchhofallee 25", city: "Kiel", zipCode: 24103, longitude: 10.1248777, latitude: 54.3177336, website: "http://www.aldi.de")
         s8.save(flush: true, failOnError: true)
-        def Store s9 = new Store(name: "CITTI-Markt Kiel", street1: "Mühlendamm 1", city: "Kiel", zipCode: 24113, longitude: 50.0, latitude: 10.0)
+        def Store s9 = new Store(name: "CITTI-Markt Kiel", street1: "Mühlendamm 1", city: "Kiel", zipCode: 24113, longitude: 10.099299, latitude: 54.313529)
         s9.save(flush: true, failOnError: true)
 
         // products

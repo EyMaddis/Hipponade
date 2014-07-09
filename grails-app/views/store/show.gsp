@@ -34,12 +34,12 @@
                 <p class="lead schnack">
                     Internetseite:
                 </p>
-                <a class="lead" href="${storeInstance?.website}">${storeInstance?.website}</a>
+                <a class="lead" target="_blank" href="${storeInstance?.website}">${storeInstance?.website}</a>
                 </g:if>
 
             </div>
             <div class="col-md-6">
-                <h2>Für dich haben wir</h2>
+                <h2>Hier findest du</h2>
                 <div class="schnack">
                 <g:each in="${storeInstance.products}" status="i" var="productInstance">
                     <p class="lead"><g:link controller="product" action="show" id="${productInstance.id}">${productInstance.name}</g:link></p>
