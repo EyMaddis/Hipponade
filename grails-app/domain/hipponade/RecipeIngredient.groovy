@@ -9,7 +9,7 @@ class RecipeIngredient {
     static belongsTo = [Ingredient]
     static constraints = {
         ingredient()
-        type nullable: false, blank: false, inList: ["g", "ml", "kg", "l", "Tl", "Tasse", "Prise", "cl"]
+        type nullable: false, blank: false, inList: ["g", "ml", "kg", "l", "Tl", "Tasse", "Prise", "cl", "Päckchen"]    //TODO eier?
         amount min: 1
     }
 }
