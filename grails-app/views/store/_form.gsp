@@ -52,7 +52,7 @@
 		<span class="required-indicator">*</span>
 	</label>
     <div class="col-sm-10">
-        <g:textField class="form-control" name="zipCode" maxlength="5" required="" value="${storeInstance?.zipCode}"/>
+        <g:field name="zipCode" type="number" class="form-control" value="${storeInstance.zipCode}" required=""/>
 
     </div>
 </div>
@@ -74,7 +74,7 @@
 		<span class="required-indicator">*</span>
 	</label>
     <div class="col-sm-10">
-        <g:textField class="form-control" name="longitude" required="" value="${storeInstance?.longitude}"/>
+        <g:field name="longitude" value="${fieldValue(bean: storeInstance, field: 'longitude')}" required=""/>
 
     </div>
 </div>
@@ -85,7 +85,7 @@
 		<span class="required-indicator">*</span>
 	</label>
     <div class="col-sm-10">
-        <g:textField class="form-control" name="latitude" required="" value="${storeInstance?.latitude}"/>
+        <g:field name="latitude" value="${fieldValue(bean: storeInstance, field: 'latitude')}" required=""/>
 
     </div>
 </div>
