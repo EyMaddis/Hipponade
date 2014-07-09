@@ -13,4 +13,6 @@ class AboutController {
     def privacy(){}
 
     def terms(){}
+
+    def admin(){}
 }
