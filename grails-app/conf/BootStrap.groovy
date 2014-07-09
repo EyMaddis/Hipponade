@@ -177,7 +177,10 @@ class BootStrap {
                         "voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. " +
                         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." +
                         "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n\n" +
-                        "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.")
+                        "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
+        css: "body {" +
+                "color: rgb(170, 0, 0);" +
+                "}")
         .addToImages(Image.findByFileName("fritz-limo-breit.png"))
 
         .addToStore(s2)
@@ -207,7 +210,10 @@ class BootStrap {
                         "voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. " +
                         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." +
                         "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n\n" +
-                        "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.")
+                        "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
+                css: "body {" +
+                        "color: brown;" +
+                        "}")
         .addToImages(Image.findByFileName("mischmasch-breit.png"))
 
         .addToStore(s1)

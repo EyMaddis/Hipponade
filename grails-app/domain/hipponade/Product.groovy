@@ -23,6 +23,7 @@ class Product {
 
     static mapping = {
         description type:'text'
+        css type:'text'
     }
 
     def beforeDelete = {

@@ -9,8 +9,8 @@
 </head>
 
 <body>
-<div class="jumbotron marketing">
-            <img src="${createLink(uri: '/')}assets/products/${productInstance?.images[0].fileName}" alt="...">
+<div class="jumbotron marketing" id="productJumbotron">
+            <img class="img-responsive" src="${createLink(uri: '/')}assets/products/${productInstance?.images[0].fileName}" alt="...">
 </div>
 <div class="container marketing">
     <div id="show-product" class="content scaffold-show" role="main">
@@ -106,5 +106,8 @@
         </sec:ifLoggedIn>
     </div>
 </div>
+<style>
+ ${productInstance.css}
+</style>
 </body>
 </html>
