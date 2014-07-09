@@ -4,18 +4,27 @@ import hipponade.NutritionFact
 import hipponade.Product
 import hipponade.Recipe
 import hipponade.RecipeIngredient
+import hipponade.Role
 import hipponade.Store
 import hipponade.User
 import hipponade.Event
 import hipponade.Tag
 import hipponade.Image
+import hipponade.UserRole
 
 class BootStrap {
 
     def init = { servletContext ->
 
+        def Role role = new Role(authority: "ROLE_ADMIN")
+        role.save(flush: true, failOnError: true)
+
+
         def User user = new User(username: "test", password: "test")
         user.save(flush: true, failOnError: true)
+
+
+        UserRole.create(user, role, true)
 
         def Recipe recipe1 = new Recipe(name: "Cubanade Libre", instructions: "1. Colanade 2. Rum")
         recipe1.save(flush: true, failOnError: true)
@@ -202,7 +211,6 @@ class BootStrap {
 
         .save(flush: true, failOnError: true)
 
-
         new Product(name: "Hipponade Braun", shortDescription: "Das feinste aus Frucht und Cola",
                 description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, " +
                         "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit " +
@@ -233,7 +241,9 @@ class BootStrap {
         .addToTags(sour)
         .addToTags(refreshing)
 
-        .save(flush: true, failOnError: true)
+
+        .save(flush: true, failOnError: true).setNutrition(new NutritionFact(calories: 100, carbs: 10.2f, fat: 6.2f, protein: 0.6f, fiber: 0.0f).save(flush: true, failOnError: true))
+
     }
     def destroy = {
     }

@@ -70,7 +70,7 @@
                 zoom: 14,
                 disableDefaultUI: false,
                 // Nicht zoomen beim scrollen
-                scrollwheel: true,
+                scrollwheel: false,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
 
