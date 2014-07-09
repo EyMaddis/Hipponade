@@ -14,7 +14,8 @@
             ${flash.message}
         </div>
     </g:if>
-    <g:layoutBody/><div class="container">
+<g:layoutBody/>
+<div class="container">
     <footer class="marketing">
         <div class="row">
         <div class="col-md-3"><h5>Facebook</h5><p>

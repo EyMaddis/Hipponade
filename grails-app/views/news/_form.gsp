@@ -24,7 +24,7 @@
     </div>
 </div>
 
-<div class="form-group fieldcontain ${hasErrors(bean: newsInstance, field: 'date', 'error')} required">
+%{--<div class="form-group fieldcontain ${hasErrors(bean: newsInstance, field: 'date', 'error')} required">
 	<label class="col-sm-2 control-label" for="date">
 		<g:message code="news.date.label" default="Date" />
 		<span class="required-indicator">*</span>
@@ -33,7 +33,7 @@
         <g:datePicker name="date" precision="day"  value="${newsInstance?.date}"  />
 
     </div>
-</div>
+</div>--}%
 
 <div class="form-group fieldcontain ${hasErrors(bean: newsInstance, field: 'author', 'error')} required">
 	<label class="col-sm-2 control-label" for="author">

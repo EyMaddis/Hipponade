@@ -10,15 +10,31 @@
 
 <body>
 <div class="schnack container marketing">
+    <div class="col-md-8">
+        <g:each in="${newsInstanceList}" status="i" var="newsInstance">
+            <div class="row news-post">
+                <g:if test="${i != 0}"><hr class="featurette-divider"> </g:if>
+                <div class="featurette">
+                    <h1>
+                        <g:link action="show" id="${newsInstance.id}">
+                            ${newsInstance.headline}
+                        </g:link>
+                    </h1>
+                    <p class="text-justify text-center">
+                        <% def content = raw(newsInstance.content)
+                         if(content != null)
+                            content = content.replaceAll('\n','<br />')
+                        %>
+${raw(content)}
 
-    <g:each in="${newsInstanceList}" status="i" var="newsInstance">
-    <g:if test="${i != 0}"><hr class="featurette-divider"> </g:if>
-    <div class="featurette">
-        <p class="featurette-heading lead"><g:link action="show"
-                                               id="${newsInstance.id}">${newsInstance.headline}</g:link></p>
-        <p class="text-justify text-center">${newsInstance.content}</p>
+                    </p>
+                </div>
+            </div>
+        </g:each>
     </div>
-    </g:each>
+    <div class="col-md-4 news-sidebar">
+        Sidebar!
+    </div>
 
 
     <sec:ifLoggedIn>
