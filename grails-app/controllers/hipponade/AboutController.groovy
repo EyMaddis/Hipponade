@@ -7,4 +7,10 @@ class AboutController {
     def story() {
 
     }
+
+    def legal(){}
+
+    def privacy(){}
+
+    def terms(){}
 }

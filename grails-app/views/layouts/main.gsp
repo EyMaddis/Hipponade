@@ -29,15 +29,15 @@
             <p><a href="http://www.youtube.com">Unser Kanal</a></p>
         </div>
         <div class="col-md-3">
-            <h5>Externe</h5>
+            <p class="lead">Externe</p>
             <p><g:navigationLink controller="store" action="index" linkOnly="true">Großhändler</g:navigationLink></p>
         </div>
         </div>
         <hr class="divider">
         <div class="row">
-            <div class="col-md-2 col-md-offset-2">Impressum</div>
-            <div class="col-md-2">Datenschutz</div>
-            <div class="col-md-2">Nutzungsbedingungen</div>
+            <div class="col-md-2 col-md-offset-2"><g:navigationLink controller="about" action="legal" linkOnly="true">Impressum</g:navigationLink></div>
+            <div class="col-md-2"><g:navigationLink controller="about" action="privacy" linkOnly="true">Datenschutz</g:navigationLink></div>
+            <div class="col-md-2"><g:navigationLink controller="about" action="terms" linkOnly="true">Nutzungsbedingungen</g:navigationLink></div>
             <div class="col-md-2"><g:navigationLink controller="login" action="auth" linkOnly="true">Admin</g:navigationLink></div>
         </div>
     </footer>
