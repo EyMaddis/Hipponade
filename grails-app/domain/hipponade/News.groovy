@@ -12,7 +12,7 @@ class News {
     static constraints = {
         headline blank: false, maxSize: 140, nullable: false
         content nullable: false, blank: false, maxSize: 60000
-        date()
+        date display: false
         author nullable: false
     }
 }
