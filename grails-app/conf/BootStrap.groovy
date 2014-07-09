@@ -14,19 +14,6 @@ class BootStrap {
 
     def init = { servletContext ->
 
-        def Ingredient ing1 = new Ingredient(name: "Erdbeere")
-        def Ingredient ing2 = new Ingredient(name: "Tomate")
-        def Ingredient ing3 = new Ingredient(name: "Kirsche")
-        def Ingredient ing4 = new Ingredient(name: "Apfel")
-        def Ingredient ing5 = new Ingredient(name: "Birne")
-        def Ingredient ing6 = new Ingredient(name: "Banane")
-        ing1.save(flush: true, failOnError: true)
-        ing2.save(flush: true, failOnError: true)
-        ing3.save(flush: true, failOnError: true)
-        ing4.save(flush: true, failOnError: true)
-        ing5.save(flush: true, failOnError: true)
-        ing6.save(flush: true, failOnError: true)
-
         def User user = new User(username: "test", password: "test")
         user.save(flush: true, failOnError: true)
 
@@ -43,30 +30,20 @@ class BootStrap {
                 img.save(flush: true, failOnError: true)
 
         }
-        def img = Image.findByFileName("fritz-kola-breit.png")
-        def Product prod = new Product(name: "Colanade", shortDescription: "Nullam id dolor id nibh ultricies vehicula ut id elit.", description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   \n" +
-                "\n" +
-                "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   \n" +
-                "\n" +
-                "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse")
-        prod.addToImages(img)
-        prod.addToRecipes(recipe1)
-        prod.addToRecipes(recipe2)
-
         def e = new Event(name:"Hipponade bei Strandparty", description:"Heute geht die Strandparty mit HIPPONADE ab!!" +
                 " Seid dabei, wenn wir mit den neusten Hits am Strand chillen. Freut euch auf HIPPONADE und jede Menge Spaß!!",
                 location: "Strand Brasilien", date: new Date());
         if(e.validate()) e.save()
 
         //tags
-        def t = new Tag(label: "erfrischend")
-        if(t.validate()) t.save(flush: true)
-        def lecker = new Tag(label: "superlecker")
-        if(lecker.validate()) lecker.save(flush: true)
-        def einfach = new Tag(label: "einfach")
-        if(einfach.validate()) einfach.save(flush: true)
-        def sweet = new Tag(label: "süß")
-        if(sweet.validate()) sweet.save(flush: true)
+        def vegan = new Tag(label: "vegan").save(flush: true)
+        def bio = new Tag(label: "bio").save(flush: true)
+        def fairtrade = new Tag(label: "fairtrade").save(flush: true)
+        def refreshing = new Tag(label: "erfrischend").save(flush: true)
+        def delicious = new Tag(label: "lecker").save(flush: true)
+        def simple = new Tag(label: "einfach").save(flush: true)
+        def sweet = new Tag(label: "süß").save(flush: true)
+        def sour = new Tag(label: "sauer").save(flush: true)
 
         //nutritionFacts
         def nuts = new NutritionFact(fat: 0, carbs: 4, protein: 0, calories: 40, fiber: 0)  //for a -nade
@@ -75,6 +52,16 @@ class BootStrap {
         def nadanuts = new NutritionFact(fat: 1.88, carbs: 22.66, protein: 0.42, calories: 174, fiber: 0.3).save(failOnError: true, flush: true) //für cocktail colada
 
         //ingredients
+        def Ingredient cocanut = new Ingredient(name: "Coca-Nuss").save(flush: true, failOnError: true)
+        def Ingredient strawberry = new Ingredient(name: "Erdbeere").save(flush: true, failOnError: true)
+        def Ingredient tomato = new Ingredient(name: "Tomate").save(flush: true, failOnError: true)
+        def Ingredient cherry = new Ingredient(name: "Kirsche").save(flush: true, failOnError: true)
+        def Ingredient apple = new Ingredient(name: "Apfel").save(flush: true, failOnError: true)
+        def Ingredient pear = new Ingredient(name: "Birne").save(flush: true, failOnError: true)
+        def Ingredient banana = new Ingredient(name: "Banane").save(flush: true, failOnError: true)
+        def Ingredient lemon = new Ingredient(name: "Zitrone").save(flush: true, failOnError: true)
+        def Ingredient elder = new Ingredient(name: "Holunder").save(flush: true, failOnError: true)
+        def Ingredient orange = new Ingredient(name: "Orange").save(flush: true, failOnError: true)
         def sugar = new Ingredient(name: "Zucker").save(failOnError: true, flush: true)
         def flour = new Ingredient(name: "Mehl").save(failOnError: true, flush: true)
         def fat =  new Ingredient(name: "Öl").save(failOnError: true, flush: true)
@@ -104,7 +91,7 @@ class BootStrap {
         def rec = new Recipe(name: "Hipponadenkuchen", shortDescription: "einfacher, leckerer Kuchen",
                 instructions: "Einfach alle Zutaten vermischen und auf einem gefetteten Backblech oder in eine Springform geben. " +
                         "Bei 180°C circa 40-45 Minuten backen. In der Springform ein wenig länger. " +
-                        "Besonder lecker mit selbstgemachter Sahne obendrauf und einer Hipponade nebenbei!!")  //fantakuchen
+                        "Besonders lecker mit selbstgemachter Sahne obendrauf und einer Hipponade nebenbei!!")  //fantakuchen
         rec.addToIngredients(recI1)
         rec.addToIngredients(recI2)
         rec.addToIngredients(recI3)
@@ -112,8 +99,8 @@ class BootStrap {
         rec.addToIngredients(recI5)
         rec.addToIngredients(recI6)
         rec.addToIngredients(recI7)
-        rec.addToTags(lecker)
-        rec.addToTags(einfach)
+        rec.addToTags(delicious)
+        rec.addToTags(simple)
         rec.nutrition = recnuts
         rec.addToImages(Image.findByFileName("hipponadenkuchen.jpg"))
         rec.save(failOnError: true, flush: true)
@@ -121,8 +108,8 @@ class BootStrap {
         def hipponada = new Recipe(name: "Pina Hipponada", shortDescription: "leckerer Cocktail mit Hipponade!",
         instructions: "Zuerst den Rum in ein hübsches Cocktailglas geben. Dann Kokossirup und Sahne dazu! " +
                 "Nun fehlt nur noch HIPPONANAS! Und dein Cocktail wird das Highlight jeder Party!!") //rezept für einen pinacolada mit hipponade(ananas)
-        hipponada.addToTags(einfach)
-        hipponada.addToTags(lecker)
+        hipponada.addToTags(simple)
+        hipponada.addToTags(delicious)
         hipponada.addToTags(sweet)
         hipponada.addToIngredients(recl9)
         hipponada.addToIngredients(recl10)
@@ -151,17 +138,96 @@ class BootStrap {
         def Store s9 = new Store(name: "CITTI-Markt Kiel", street1: "Mühlendamm 1", city: "Kiel", zipCode: 24113, longitude: 50.0, latitude: 10.0)
         s9.save(flush: true, failOnError: true)
 
-        prod.addToStore(s1)
-        prod.addToStore(s2)
-        prod.addToStore(s3)
-        prod.addToStore(s4)
-        prod.addToStore(s5)
-        prod.addToStore(s6)
+        // products
+        new Product(name: "Colanade", shortDescription: "Der frische Geschmack von Cola ohne Kompromisse",
+                description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. " +
+                "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. " +
+                        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, " +
+                        "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est " +
+                        "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et" +
+                        " dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea " +
+                        "takimata sanctus est Lorem ipsum dolor sit amet.")
+        .addToImages(Image.findByFileName("fritz-kola-breit.png"))
+        .addToRecipes(recipe1)
+        .addToRecipes(recipe2)
+
+        .addToStore(s1)
+        .addToStore(s2)
+        .addToStore(s3)
+        .addToStore(s4)
+        .addToStore(s5)
+        .addToStore(s6)
+
+        .addToIngredients(sugar)
+        .addToIngredients(cocanut)
+
+        .addToTags(vegan)
+        .addToTags(bio)
+        .addToTags(fairtrade)
+        .addToTags(sweet)
+        .addToTags(refreshing)
+
+        .save(flush: true, failOnError: true)
 
 
-        prod.addToIngredients(sugar)
-        prod.addToIngredients(cream)
-        prod.save(flush: true, failOnError: true)
+        new Product(name: "Hipponade Rot", shortDescription: "Frisch, fruchtig, wie es sein muss",
+                description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, " +
+                        "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit " +
+                        "amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam " +
+                        "voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. " +
+                        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." +
+                        "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n\n" +
+                        "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.")
+        .addToImages(Image.findByFileName("fritz-limo-breit.png"))
+
+        .addToStore(s2)
+        .addToStore(s3)
+        .addToStore(s4)
+
+        .addToIngredients(apple)
+        .addToIngredients(cherry)
+        .addToIngredients(elder)
+        .addToIngredients(lemon)
+        .addToIngredients(sugar)
+
+        .addToTags(vegan)
+        .addToTags(bio)
+        .addToTags(fairtrade)
+        .addToTags(sour)
+        .addToTags(refreshing)
+        .addToTags(refreshing)
+
+        .save(flush: true, failOnError: true)
+
+
+        new Product(name: "Hipponade Braun", shortDescription: "Das feinste aus Frucht und Cola",
+                description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, " +
+                        "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit " +
+                        "amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam " +
+                        "voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. " +
+                        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." +
+                        "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n\n" +
+                        "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.")
+        .addToImages(Image.findByFileName("mischmasch-breit.png"))
+
+        .addToStore(s1)
+        .addToStore(s4)
+        .addToStore(s7)
+        .addToStore(s8)
+        .addToStore(s9)
+
+        .addToIngredients(orange)
+        .addToIngredients(lemon)
+        .addToIngredients(sugar)
+        .addToIngredients(cocanut)
+
+        .addToTags(vegan)
+        .addToTags(bio)
+        .addToTags(fairtrade)
+        .addToTags(sour)
+        .addToTags(refreshing)
+
+        .save(flush: true, failOnError: true)
     }
     def destroy = {
     }
