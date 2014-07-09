@@ -16,7 +16,7 @@ class Store {       //jeder kann hinzufügen mit captcha, admin autorisiert
     static hasMany = [products: Product]
 
     static constraints = {
-        name blank: false, nullable: false, range: 10..100
+        name blank: false, nullable: false
         street1 blank: false, nullable: false
         street2 blank: true, nullable: true
         city blank: false, nullable: false

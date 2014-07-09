@@ -51,7 +51,6 @@ class BootStrap {
         prod.addToImages(img)
         prod.addToRecipes(recipe1)
         prod.addToRecipes(recipe2)
-        prod.save(flush: true, failOnError: true)
 
         def e = new Event(name:"Hipponade bei Strandparty", description:"Heute geht die Strandparty mit HIPPONADE ab!!" +
                 " Seid dabei, wenn wir mit den neusten Hits am Strand chillen. Freut euch auf HIPPONADE und jede Menge Spaß!!",
@@ -128,6 +127,11 @@ class BootStrap {
         hipponada.addToIngredients(recl11)
         hipponada.nutrition = nadanuts
         hipponada.save(failOnError: true, flush: true)
+
+
+        prod.addToIngredients(sugar)
+        prod.addToIngredients(cream)
+        prod.save(flush: true, failOnError: true)
     }
     def destroy = {
     }

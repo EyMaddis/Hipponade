@@ -62,11 +62,29 @@
         </div>
     </div>
     </div>
-        <g:if test="${productInstance?.store}">
-        <div class="lead">
-            Wo zu kaufen
+        <div class="row schnack">
+            <div class="col-md-4 col-md-offset-2">
+                <div class="lead">Zutaten</div>
+                <g:each in="${productInstance?.ingredients}" status="i" var="ingredient">
+                    <p>${ingredient.name}</p>
+                </g:each>
+            </div>
+            <div class="col-md-4">
+                <div class="lead">Hier kannst du es kaufen</div>
+                <g:each in="${productInstance?.store}" status="i" var="store">
+
+                    <g:if test="${i == 5}"><div id="morestores" class="collapse"></g:if>
+                        <p>${store.name}</p>
+                    <g:if test="${i == productInstance.store.size() - 1 && i >= 5}"></div></g:if>
+
+
+                </g:each>
+                <g:if test="${productInstance?.store?.size() > 5}"><a data-toggle="collapse" data-parent="#accordion" href="#morestores">
+                    <span class="btn btn-default glyphicon glyphicon-arrow-down">Mehr</span>
+                </a></g:if>
+                    </div>
+            </div>
         </div>
-            </g:if>
 
         <sec:ifLoggedIn>
         <g:form url="[resource: productInstance, action: 'delete']" method="DELETE">
