@@ -40,9 +40,11 @@
             </div>
             <div class="col-md-6">
                 <h2>Für dich haben wir</h2>
+                <div class="schnack">
                 <g:each in="${storeInstance.products}" status="i" var="productInstance">
                     <p class="lead"><g:link controller="product" action="show" id="${productInstance.id}">${productInstance.name}</g:link></p>
                 </g:each>
+                </div>
             </div>
         </div>
         <script type="text/javascript"
