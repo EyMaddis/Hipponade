@@ -4,6 +4,7 @@ import hipponade.NutritionFact
 import hipponade.Product
 import hipponade.Recipe
 import hipponade.RecipeIngredient
+import hipponade.Store
 import hipponade.User
 import hipponade.Event
 import hipponade.Tag
@@ -128,6 +129,34 @@ class BootStrap {
         hipponada.addToIngredients(recl11)
         hipponada.nutrition = nadanuts
         hipponada.save(failOnError: true, flush: true)
+
+
+        // Stores
+        def Store s1 = new Store(name: "Sky Coop", street1: "Weißenburgstr. 15", city: "Kiel", zipCode: 24116, longitude: 50.0, latitude: 10.0)
+        s1.save(flush: true, failOnError: true)
+        def Store s2 = new Store(name: "Mensa Uni Kiel", street1: "Christian-Albrechts-Platz 4", city: "Kiel", zipCode: 24118, longitude: 50.0, latitude: 10.0)
+        s2.save(flush: true, failOnError: true)
+        def Store s3 = new Store(name: "Lidl", street1: "Kirchhofallee 68", city: "Kiel", zipCode: 24114, longitude: 50.0, latitude: 10.0)
+        s3.save(flush: true, failOnError: true)
+        def Store s4 = new Store(name: "Penny", street1: "Holtenauer Straße 84", city: "Kiel", zipCode: 24105, longitude: 50.0, latitude: 10.0)
+        s4.save(flush: true, failOnError: true)
+        def Store s5 = new Store(name: "real,- SB Warenhaus", street1: "Mergenthalerstraße 21", city: "Schwentinental-Raisdorf", zipCode: 24223, longitude: 50.0, latitude: 10.0)
+        s5.save(flush: true, failOnError: true)
+        def Store s6 = new Store(name: "Rewe City", street1: "Wilhelminenstraße 10", city: "Kiel", zipCode: 24103, longitude: 50.0, latitude: 10.0)
+        s6.save(flush: true, failOnError: true)
+        def Store s7 = new Store(name: "E Neukauf Kiel", street1: "Sophienhof 20", city: "Kiel", zipCode: 24103, longitude: 50.0, latitude: 10.0)
+        s7.save(flush: true, failOnError: true)
+        def Store s8 = new Store(name: "Aldi", street1: "Kirchhofallee 25", city: "Kiel", zipCode: 24103, longitude: 50.0, latitude: 10.0)
+        s8.save(flush: true, failOnError: true)
+        def Store s9 = new Store(name: "CITTI-Markt Kiel", street1: "Mühlendamm 1", city: "Kiel", zipCode: 24113, longitude: 50.0, latitude: 10.0)
+        s9.save(flush: true, failOnError: true)
+
+        prod.addToStore(s1)
+        prod.addToStore(s2)
+        prod.addToStore(s3)
+        prod.addToStore(s4)
+        prod.addToStore(s5)
+        prod.addToStore(s6)
 
 
         prod.addToIngredients(sugar)
