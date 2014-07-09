@@ -38,7 +38,10 @@
             <div class="col-md-2 col-md-offset-2"><g:navigationLink controller="about" action="legal" linkOnly="true">Impressum</g:navigationLink></div>
             <div class="col-md-2"><g:navigationLink controller="about" action="privacy" linkOnly="true">Datenschutz</g:navigationLink></div>
             <div class="col-md-2"><g:navigationLink controller="about" action="terms" linkOnly="true">Nutzungsbedingungen</g:navigationLink></div>
-            <div class="col-md-2"><g:navigationLink controller="login" action="auth" linkOnly="true">Admin</g:navigationLink></div>
+            <div class="col-md-2"><sec:ifNotLoggedIn><g:navigationLink controller="login" action="auth" linkOnly="true">Admin
+            </g:navigationLink></sec:ifNotLoggedIn>
+            <sec:ifLoggedIn><g:remoteLink class="logout" controller="logout" method="post" asynchronous="false" onSuccess="location.reload()">Logout</g:remoteLink></sec:ifLoggedIn>
+            </div>
         </div>
     </footer>
 </div>
