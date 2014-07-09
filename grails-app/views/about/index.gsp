@@ -6,6 +6,6 @@
 </head>
 
 <body>
-<div class="container">Wir sind toll</div>
+<div class="schnack container">Wir sind toll</div>
 </body>
 </html>
