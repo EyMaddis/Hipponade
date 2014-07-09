@@ -30,7 +30,7 @@
         </div>
         <div class="col-md-3">
             <h5>Externe</h5>
-            <p><g:navigationLink controller="store" action="index" linkOnly="true">Großhändler</g:navigationLink></p>
+            <p><g:navigationLink controller="store" action="create" linkOnly="true">Großhändler</g:navigationLink></p>
         </div>
         </div>
         <hr class="divider">

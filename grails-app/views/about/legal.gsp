@@ -6,12 +6,14 @@
 </head>
 
 <body>
-<div class="marketing">
-<div class="lead biglead">
-    <p>Impressum</p>
-    </div>
+<div class="schnack marketing">
+<h1>
+    <p>
+        Impressum
+    </p>
+    </h1>
 
-    <p>Hipponade GmbH<br/>
+    <p class="lead schnack">Hipponade GmbH<br/>
     Christian-Albrechts-Platz 4<br/>
     24118 Kiel<br/><br/>
 

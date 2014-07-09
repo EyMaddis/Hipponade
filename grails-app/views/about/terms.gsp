@@ -5,11 +5,11 @@
     <meta name="layout" content="main">
 </head>
 <body>
-<div class="container marketing">
-<div class="lead biglead">
+<div class="schnack container marketing">
+<h1>
     Nutzungsbestimmungen
-</div>
-<p class="text-justify">
+</h1>
+<p class="lead schnack text-justify">
 Diese Website wird von Hipponade GmbH, nachstehend als „HIP“ bezeichnet, betrieben.
 <br/><br/>
 Die vorliegenden Nutzungsbedingungen beziehen ausdrücklich die HIPPONA.DE-DATENSCHUTZPOLITIK und andere Richtlinien, Vorschriften und Haftungsausschlüsse mit ein, die auf bestimmten Webseiten auf dieser Site oder in Ihnen zugesandten Mitteilungen veröffentlicht bzw. aktualisiert werden.

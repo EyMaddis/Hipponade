@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<div class="container marketing">
+<div class="schnack container marketing">
 
     <g:each in="${newsInstanceList}" status="i" var="newsInstance">
     <g:if test="${i != 0}"><hr class="featurette-divider"> </g:if>

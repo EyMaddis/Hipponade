@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<div class="container">
+<div class="schnack container">
     <h1>Unsere Geschichte <small>Von klein auf gelernt</small></h1>
 
     <div class="well" style="max-width: 500px; margin: auto">

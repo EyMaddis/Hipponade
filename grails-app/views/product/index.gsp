@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<div id="list-product" class="content scaffold-list marketing container" role="main">
+<div id="list-product" class="schnack content scaffold-list marketing container" role="main">
 
     <div class="row">
         <g:each in="${productInstanceList}" status="i" var="productInstance">
@@ -70,7 +70,9 @@
 
         <div class="col-md-4">
 
-            <p class="lead blocktext">Kommt noch</p>
+            <p class="lead blocktext">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+            ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum </p>
         </div>
     </div>
 </div>
