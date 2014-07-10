@@ -9,13 +9,8 @@
 <div class="schnack container">
     <h1>Unsere Geschichte <small>Von klein auf gelernt</small></h1>
 
-    <div class="well" style="max-width: 500px; margin: auto">
-        <p>
-            Schon als kleiner Junge, hat Hannes seine Getränke selber gemixt.
-        </p>
-        <div class="pull-right small" style="font-style: italic">Hannes Mutter</div>
-        <div class="clearfix"></div>
-    </div>
+    <blockquote >Schon als kleiner Junge, hat Hannes seine Getränke selber gemixt.
+    <footer>Hannes Mutter</footer></blockquote>
     <hr />
 
     <div class="row featurette">
