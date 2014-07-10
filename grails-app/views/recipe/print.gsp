@@ -4,7 +4,7 @@
 <html>
 <head>
     <g:set var="entityName" value="${message(code: 'recipe.label', default: 'Recipe')}"/>
-    <title><g:message code="default.show.label" args="[entityName]"/></title>
+    <title>${recipeInstance?.name}</title>
 </head>
 
 <body onload="window.print()">
