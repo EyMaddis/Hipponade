@@ -17,11 +17,11 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         %{-- Selbst geschriebenes Navigations Tag --}%
+                        <g:navigationLink controller="product">Getränke</g:navigationLink>
                         <g:navigationLink controller="news">Neuigkeiten</g:navigationLink>
+                        <g:navigationLink controller="about" action="index">Über Uns</g:navigationLink>
                         <g:navigationLink controller="about" action="story">Geschichte</g:navigationLink>
                         <g:navigationLink controller="recipe">Rezepte</g:navigationLink>
-                        <g:navigationLink controller="product">Getränke</g:navigationLink>
-                        <g:navigationLink controller="about" action="index">Über Uns</g:navigationLink>
                     </ul>
                     <form class="navbar-form navbar-right" role="search">
                         <div class="input-group">
