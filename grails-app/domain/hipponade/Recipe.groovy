@@ -6,6 +6,7 @@ class Recipe {
     String shortDescription
     String instructions
     NutritionFact nutrition
+    //Product product für recipe.show   TODO
 
 //    static belongsTo = [Tag]
     static hasMany = [tags: Tag, ingredients:RecipeIngredient, images: Image]

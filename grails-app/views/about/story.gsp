@@ -26,7 +26,7 @@
                 Er wuchs auf einem Bio-Bauernhof auf, welcher nur Getreide anbaute und einen Streichelzoo betrieb.
             </p>
             <p class="lead">
-                Dort entdeckte Hannes seine Liebe und zur Natur.
+                Dort entdeckte Hannes seine Liebe zur Natur.
             </p>
         </div>
         <div class="col-md-5">
@@ -44,7 +44,7 @@
         <div class="col-md-7">
             <h2 class="featurette-heading">Ein Traum in der Entstehung.</h2>
             <p class="lead">
-                Bereits mit 11 Jahren hatte der immer noch sehr kleine Hannes seinen Traum war gemacht und mit den saisonalen Früchten direkt vom Hof die ersten Experimente gemacht.
+                Bereits mit 11 Jahren hatte der immer noch sehr kleine Hannes seinen Traum wahr gemacht und mit den saisonalen Früchten direkt vom Hof die ersten Experimente gemacht.
                 Die Getränke wurden immer beliebter bis Hannes mit 12 Jahren Hipponade gründete.
             </p>
             <p class="lead">

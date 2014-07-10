@@ -12,9 +12,12 @@
 <div class="schnack container">
     <div class="nav" role="navigation">
         <ul>
-            <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-            <li><g:link class="create" action="create"><g:message code="default.new.label"
-                                                                  args="[entityName]"/></g:link></li>
+            <a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a>
+            <sec:ifLoggedIn>
+            <br>
+                <g:link class="create" action="create"><g:message code="default.new.label"
+                                                                  args="[entityName]"/></g:link>
+            </sec:ifLoggedIn>
         </ul>
     </div>
 
@@ -26,10 +29,14 @@
                 <thead>
                 <tr>
                     %{--TODO: Mit Image? oder nur vorschau? --}%
+                    <th>Bilder</th>
+
                     <g:sortableColumn property="name" title="${message(code: 'recipe.name.label', default: 'Name')}"/>
                     
                     <g:sortableColumn property="shortDescription" title="${message(code: 'recipe.shortDescription.label', default: 'Beschreibung')}"/>
                     
+
+
                     <th><g:message code="recipe.nutrition.label" default="Nährwerte"/></th>
                     
                 </tr>
@@ -37,13 +44,16 @@
                 <tbody>
                 <g:each in="${recipeInstanceList}" status="i" var="recipeInstance">
                     <tr>
-                        
+                        <td><g:if test="${recipeInstance.images}"><img src="/Hipponade/assets/products/${recipeInstance?.images[0].fileName}" width="50" height="30" alt="..."></g:if>
+                            <g:else><img src="/Hipponade/assets/products/standart.png" width="50" height="30" alt="..."></g:else></td>
+
                         <td><g:link action="show"
                                     id="${recipeInstance.id}">${fieldValue(bean: recipeInstance, field: "name")}</g:link></td>
                         
                         <td>${fieldValue(bean: recipeInstance, field: "shortDescription")}</td>
 
-                        
+
+
                         <td><g:if test="${recipeInstance?.nutrition}">${recipeInstance.nutrition?.calories} kcal</g:if></td>
                         
                     </tr>

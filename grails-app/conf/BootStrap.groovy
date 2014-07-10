@@ -125,6 +125,7 @@ class BootStrap {
         hipponada.addToIngredients(recl10)
         hipponada.addToIngredients(recl11)
         hipponada.nutrition = nadanuts
+        hipponada.addToImages(Image.findByFileName("hipponada.jpg"))
         hipponada.save(failOnError: true, flush: true)
 
 
@@ -300,7 +301,7 @@ class BootStrap {
         .save(flush: true, failOnError: true)
 
 
-        new Product(name: "Hipponade Braun", shortDescription: "Das feinste aus Frucht und Cola",
+        new Product(name: "Hipponade Kielwasser", shortDescription: "Das feinste aus Frucht und Cola",
                 description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, " +
                         "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit " +
                         "amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam " +
