@@ -79,14 +79,14 @@
                 <div class="schnack">
                 <g:each in="${productInstance?.store}" status="i" var="store">
 
-                    <g:if test="${i == 4}"><div id="morestores" class="collapse"></g:if>
+                    <g:if test="${i == 5}"><div id="morestores" class="collapse"></g:if>
                         <p class="lead"><g:link controller="store" action="show" id="${store.id}">${store.name}</g:link></p>
-                    <g:if test="${i == productInstance.store.size() - 1 && i >= 4}"></div></g:if>
+                    <g:if test="${i == productInstance.store.size() - 1 && i >= 5}"></div></g:if>
 
 
                 </g:each>
                 </div>
-                <g:if test="${productInstance?.store?.size() > 4}"><a data-toggle="collapse" data-parent="#accordion" href="#morestores">
+                <g:if test="${productInstance?.store?.size() > 5}"><a data-toggle="collapse" data-parent="#accordion" href="#morestores">
                     <span class="btn btn-default glyphicon glyphicon-arrow-down">Mehr</span>
                 </a></g:if>
                     </div>
@@ -94,13 +94,12 @@
         </div>
     <div class="schnack">
         <h3>Tags</h3>
-        <div class="schnack">
+        <div class="schanck">
     <g:each in="${productInstance.tags}" status="i" var="tag">
         <g:link controller="tag" action="show" id="${tag.id}" class="btn btn-default btn-xs">
             ${tag?.encodeAsHTML()}
         </g:link>
     </g:each>
-            </div>
         </div>
 
         <sec:ifLoggedIn>

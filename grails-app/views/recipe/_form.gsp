@@ -26,7 +26,7 @@
 
 <div class="form-group fieldcontain ${hasErrors(bean: recipeInstance, field: 'instructions', 'error')} required">
 	<label class="col-sm-2 control-label" for="instructions">
-		<g:message code="recipe.instructions.label" default="Zubereitung" />
+		<g:message code="recipe.instructions.label" default="Instructions" />
 		<span class="required-indicator">*</span>
 	</label>
     <div class="col-sm-10">
@@ -52,7 +52,7 @@
 		
 	</label>
     <div class="col-sm-10">
-        <g:select name="images" from="${hipponade.Image.list()}" multiple="multiple" optionKey="fileName" size="5" value="${recipeInstance?.images*.fileName}" valueMessagePrefix="image.fileName" class="many-to-many form-control"/>
+        <g:select name="images" from="${hipponade.Image.list()}" multiple="multiple" optionKey="id" size="5" value="${recipeInstance?.images*.id}" class="many-to-many form-control"/>
 
     </div>
 </div>
@@ -62,8 +62,8 @@
 		<g:message code="recipe.ingredients.label" default="Ingredients" />
 		
 	</label>
-    <div class="col-sm-10">             %{--TODO: Die Namen der INgredients sollen angezeigt werden; UND ich kann image auswählen aber nicht speichern--}%
-        <g:select name="ingredients" from="${hipponade.RecipeIngredient.list()}" multiple="multiple" optionKey="ingredient" size="5" value="${recipeInstance?.ingredients?.ingredient?.name}" valueMessagePrefix="RecipeIngredient.ingredient.name" class="many-to-many form-control"/>
+    <div class="col-sm-10">
+        <g:select name="ingredients" from="${hipponade.RecipeIngredient.list()}" multiple="multiple" optionKey="id" size="5" value="${recipeInstance?.ingredients*.id}" class="many-to-many form-control"/>
 
     </div>
 </div>
