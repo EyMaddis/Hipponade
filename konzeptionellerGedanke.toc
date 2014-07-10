@@ -1,0 +1,12 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Idee}{3}
+\contentsline {section}{\numberline {2}Usabilty Analyse}{4}
+\contentsline {subsection}{\numberline {2.1}Absolut Vodka - www.absolut.com}{4}
+\contentsline {subsection}{\numberline {2.2}Alnatura}{4}
+\contentsline {subsection}{\numberline {2.3}Bacardi}{4}
+\contentsline {subsection}{\numberline {2.4}Fritz Kola}{4}
+\contentsline {subsection}{\numberline {2.5}Mate Drinks}{4}
+\contentsline {subsection}{\numberline {2.6}MyMuesli}{4}
+\contentsline {section}{\numberline {3}Medienobjekte}{4}
+\contentsline {section}{\numberline {4}Story-Diagramm}{4}
+\contentsline {section}{\numberline {5}Modellierung der Datenbank}{4}
