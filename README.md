@@ -28,4 +28,6 @@ Original images:
 * [Recipe page cuba libre](https://www.flickr.com/photos/marie_astier/3600514684)
 * [Recipe page pie](https://www.flickr.com/photos/benimoto/2109973292)
 * [Recipe page pie 2](https://www.flickr.com/photos/djwtwo/8177516875)
-* [Start page image1](http://www.pressestelle.tu-berlin.de/fileadmin/a70100710/Medieninformationen/2007/Fruchtige_getraenke.JPG)
+* [Start page image1](https://www.flickr.com/photos/suckamc/2643190902/in/photolist-52z3yW-31Lj-5uLLHN-dawjZ-sT-6QYkqU-81TP7Q-e1JABb-5oBUfR-5YQ8L2-6mWaiY-5Qwof-4CZUEB-9ySAMD-dexPgs-ezmbdV-MXGH-5kxw4o-KECFm-bgJ7zM-7BGAdE-G1gZ7-kazNCH-8qM77w-2WWqNB-bD5kDd-2X1Ubu-rhuTj-6dZgJm-hAywVW-4ja4Uw-dFs3v-6fMKMp-zdoBq-5xveA-gNwuU-9xYnxH-2L1Ts-xrC2J-k9y3d6-jYcV6R-4mbFMt-nmnEB6-4syfb-JgGsp-dyM17R-aGheRT-5PDBMH-eAQxWc-8X3Thy)
+* [Start page image2](https://www.flickr.com/photos/8106459@N07/5972076187)
+* [Start page image3](https://www.flickr.com/photos/aigle_dore/7914623918)
