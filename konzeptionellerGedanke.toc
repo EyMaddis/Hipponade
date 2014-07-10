@@ -9,6 +9,6 @@
 \contentsline {subsection}{\numberline {2.6}MyMuesli}{4}
 \contentsline {subsection}{\numberline {2.7}Zusammenfassung}{4}
 \contentsline {section}{\numberline {3}Medienobjekte}{5}
-\contentsline {section}{\numberline {4}Story-Diagramm}{6}
-\contentsline {section}{\numberline {5}Modellierung der Datenbank}{6}
-\contentsline {section}{\numberline {6}Zusammenfassung}{6}
+\contentsline {section}{\numberline {4}Story-Diagramm}{7}
+\contentsline {section}{\numberline {5}Modellierung der Datenbank}{7}
+\contentsline {section}{\numberline {6}Zusammenfassung}{7}
