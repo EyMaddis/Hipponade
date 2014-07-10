@@ -63,7 +63,7 @@
 		
 	</label>
     <div class="col-sm-10">             %{--TODO: Die Namen der INgredients sollen angezeigt werden; UND ich kann image auswählen aber nicht speichern--}%
-        <g:select name="ingredients" from="${hipponade.RecipeIngredient.list()}" multiple="multiple" optionKey="ingredient" size="5" value="${recipeInstance?.ingredients?.ingredient.name}" valueMessagePrefix="RecipeIngredient.ingredient.name" class="many-to-many form-control"/>
+        <g:select name="ingredients" from="${hipponade.RecipeIngredient.list()}" multiple="multiple" optionKey="ingredient" size="5" value="${recipeInstance?.ingredients?.ingredient?.name}" valueMessagePrefix="RecipeIngredient.ingredient.name" class="many-to-many form-control"/>
 
     </div>
 </div>

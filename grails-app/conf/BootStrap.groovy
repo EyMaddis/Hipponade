@@ -27,12 +27,6 @@ class BootStrap {
 
         UserRole.create(user, role, true)
 
-        def Recipe recipe1 = new Recipe(name: "Cubanade Libre", instructions: "1. Colanade 2. Rum")
-        recipe1.save(flush: true, failOnError: true)
-
-        def Recipe recipe2 = new Recipe(name: "Hipponade Sunrise", instructions: "1. Colanade 2. Cherrynade")
-        recipe2.save(flush: true, failOnError: true)
-
         new File( './grails-app/assets/images/products' ).eachFile() {
             f ->
                 // imports images
@@ -91,9 +85,9 @@ class BootStrap {
         def recI5 = new RecipeIngredient(ingredient: natron, amount: 1, type: "Päckchen").save(failOnError: true, flush: true)
         def recI6 = new RecipeIngredient(ingredient: egg, amount: 4, type: "Stück(e)").save(failOnError: true, flush: true)
         def recI7 = new RecipeIngredient(ingredient: salt, amount: 1, type: "Päckchen").save(failOnError: true, flush: true)
-        def recl9 = new RecipeIngredient(ingredient: rum, amount: 6, type: "cl")
-        def recl10 = new RecipeIngredient(ingredient: cream, amount: 2, type: "cl")
-        def recl11 = new RecipeIngredient(ingredient: coconutCream, amount: 4, type: "cl")
+        def recl9 = new RecipeIngredient(ingredient: rum, amount: 6, type: "cl").save(failOnError: true, flush: true)
+        def recl10 = new RecipeIngredient(ingredient: cream, amount: 2, type: "cl").save(failOnError: true, flush: true)
+        def recl11 = new RecipeIngredient(ingredient: coconutCream, amount: 4, type: "cl").save(failOnError: true, flush: true)
 
 
 
@@ -128,6 +122,16 @@ class BootStrap {
         hipponada.addToImages(Image.findByFileName("hipponada.jpg"))
         hipponada.save(failOnError: true, flush: true)
 
+
+        def Recipe cubanaLibre = new Recipe(name: "Cubanade Libre", instructions: "1. Colanade 2. Rum")
+        .addToImages(Image.findByFileName('cubalibre.jpg'))
+        .save(flush: true, failOnError: true)
+
+        def Recipe sunrise = new Recipe(name: "Hipponade Sunrise", instructions: "1. Colanade 2. Cherrynade")
+        .addToImages(Image.findByFileName('sunrise.jpg'))
+        .addToImages(Image.findByFileName('sunrise2.jpg'))
+        .addToImages(Image.findByFileName('sunrise3.jpg'))
+        .save(flush: true, failOnError: true)
 
         // Stores
         def Store s1 = new Store(name: "Sky Coop", street1: "Weißenburgstr. 15", city: "Kiel", zipCode: 24116, longitude: 10.1184345, latitude: 54.3252079, website: "http://www.sky.coop")
@@ -246,8 +250,8 @@ class BootStrap {
                         " dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea " +
                         "takimata sanctus est Lorem ipsum dolor sit amet.")
         .addToImages(Image.findByFileName("fritz-kola-breit.png"))
-        .addToRecipes(recipe1)
-        .addToRecipes(recipe2)
+        .addToRecipes(cubanaLibre)
+        .addToRecipes(sunrise)
 
         .addToStore(s1)
         .addToStore(s2)
