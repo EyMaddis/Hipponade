@@ -56,7 +56,7 @@
            <footer>Galileo Galilei</footer></blockquote>
     <p class="lead">
         Bei der Herstellung legen wir Wert auf eine schonende Zubereitung. So werden
-        alle Zutaten, bevor diese gekocht werden, einem halbstündigen Umarmungsprozeß unterzogen, um die Süße freizusetzen.
+        alle Zutaten, bevor diese gekocht werden, einem halbstündigen Umarmungsprozeß unterzogen, um deren Süße freizusetzen.
         Auch läuft bei der Abfüllung farbenfrohe Musik. Dies hilft dem Getränk seinen lebendigen Geschmack beizubehalten.
     </p>
     </div>

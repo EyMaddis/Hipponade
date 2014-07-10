@@ -16,7 +16,7 @@
     </g:if>
 <g:layoutBody/>
 <div class="container">
-    <footer class="marketing schnack">
+    <footer class="marketing schnack" style="padding-bottom: 20px">
         <div class="row">
         <div class="col-md-3"><h5>Facebook</h5><p>
             <a href="http://www.facebook.com">Unsere Seite</a>
