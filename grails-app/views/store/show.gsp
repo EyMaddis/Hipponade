@@ -22,28 +22,28 @@
                     ${storeInstance?.street1}
                 </p>
                 <g:if test="${storeInstance?.street2}">
-                <p class="lead">
-                    ${storeInstance?.street2}
-                </p>
+                    <p class="lead">
+                        ${storeInstance?.street2}
+                    </p>
 
                 </g:if>
                 <p class="lead">
                     ${storeInstance?.country} - ${storeInstance?.zipCode} ${storeInstance?.city}
                 </p>
                 <g:if test="${storeInstance?.website}">
-                <p class="lead schnack">
-                    Internetseite:
-                </p>
-                <a class="lead" target="_blank" href="${storeInstance?.website}">${storeInstance?.website}</a>
+                    <p class="lead schnack">
+                        Internetseite:
+                    </p>
+                    <a class="lead" target="_blank" href="${storeInstance?.website}">${storeInstance?.website}</a>
                 </g:if>
 
             </div>
             <div class="col-md-6">
                 <h2>Hier findest du</h2>
                 <div class="schnack">
-                <g:each in="${storeInstance.products}" status="i" var="productInstance">
-                    <p class="lead"><g:link controller="product" action="show" id="${productInstance.id}">${productInstance.name}</g:link></p>
-                </g:each>
+                    <g:each in="${storeInstance.products}" status="i" var="productInstance">
+                        <p class="lead"><g:link controller="product" action="show" id="${productInstance.id}">${productInstance.name}</g:link></p>
+                    </g:each>
                 </div>
             </div>
         </div>
@@ -51,15 +51,15 @@
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNak3LTdIVKHuVptVka_s4aAHQt9PqgKg&sensor=true">
         </script>
         <sec:ifLoggedIn>
-        <g:form url="[resource: storeInstance, action: 'delete']" method="DELETE">
-            <fieldset class="buttons pull-right">
-                <g:link class="edit btn btn-warning" action="edit" resource="${storeInstance}"><g:message
-                        code="default.button.edit.label" default="Edit"/></g:link>
-                <g:actionSubmit class="delete btn btn-danger" action="delete"
-                                value="${message(code: 'default.button.delete.label', default: 'Delete')}"
-                                onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"/>
-            </fieldset>
-        </g:form>
+            <g:form url="[resource: storeInstance, action: 'delete']" method="DELETE">
+                <fieldset class="buttons pull-right">
+                    <g:link class="edit btn btn-warning" action="edit" resource="${storeInstance}"><g:message
+                            code="default.button.edit.label" default="Edit"/></g:link>
+                    <g:actionSubmit class="delete btn btn-danger" action="delete"
+                                    value="${message(code: 'default.button.delete.label', default: 'Delete')}"
+                                    onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"/>
+                </fieldset>
+            </g:form>
         </sec:ifLoggedIn>
     </div>
     <script type="text/javascript">
@@ -70,7 +70,7 @@
                 zoom: 14,
                 disableDefaultUI: false,
                 // Nicht zoomen beim scrollen
-                scrollwheel: true,
+                scrollwheel: false,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
 
@@ -86,7 +86,7 @@
 
 
         google.maps.event.addDomListener(window, 'load', initialize);
-        </script>
+    </script>
 </div>
 
 </body>

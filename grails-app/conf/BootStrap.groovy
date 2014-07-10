@@ -5,18 +5,27 @@ import hipponade.NutritionFact
 import hipponade.Product
 import hipponade.Recipe
 import hipponade.RecipeIngredient
+import hipponade.Role
 import hipponade.Store
 import hipponade.User
 import hipponade.Event
 import hipponade.Tag
 import hipponade.Image
+import hipponade.UserRole
 
 class BootStrap {
 
     def init = { servletContext ->
 
+        def Role role = new Role(authority: "ROLE_ADMIN")
+        role.save(flush: true, failOnError: true)
+
+
         def User user = new User(username: "test", password: "test")
         user.save(flush: true, failOnError: true)
+
+
+        UserRole.create(user, role, true)
 
         def Recipe recipe1 = new Recipe(name: "Cubanade Libre", instructions: "1. Colanade 2. Rum")
         recipe1.save(flush: true, failOnError: true)

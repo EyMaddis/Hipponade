@@ -52,7 +52,7 @@
 		
 	</label>
     <div class="col-sm-10">
-        <g:select name="store" from="${hipponade.Store.list()}" multiple="multiple" optionKey="id" size="5" value="${productInstance?.store*.id}" class="many-to-many form-control"/>
+        <g:select name="store" from="${hipponade.Store.list()}" multiple="multiple" optionKey="id" optionValue="name" size="5" value="${productInstance?.store*.id}" class="many-to-many form-control"/>
 
     </div>
 </div>
