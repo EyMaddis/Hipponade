@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<div class="row jumbotron" style="background-image: url(/Hipponade/assets/products/<g:if test="${recipeInstance?.images}">${recipeInstance?.images[0].fileName}</g:if><g:else>stardart.png</g:else>);
+<div class="row jumbotron" style="background-image: url(${createLink(uri: '/')}assets/products/<g:if test="${recipeInstance?.images}">${recipeInstance?.images[0].fileName}</g:if><g:else>stardart.png</g:else>);
 background-repeat: no-repeat; background-size: 100%">
 
     <h1 class="marketing">${recipeInstance.name}</h1>
