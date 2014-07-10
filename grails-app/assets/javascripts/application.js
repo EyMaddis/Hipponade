@@ -7,6 +7,7 @@
 //
 //= require jquery
 //= require bootstrap
+//= require blur
 // = require_tree .
 //= require_self
 
@@ -19,3 +20,4 @@ if (typeof jQuery !== 'undefined') {
 		});
 	})(jQuery);
 }
+
