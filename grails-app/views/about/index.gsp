@@ -29,7 +29,7 @@
     <p class="lead">
         In unseren Getränken findet sich auch der aktuelle Zeitgeist wieder. So wie in der Sonderedition <i>Europanade</i>,
     welche nur zur Fussball-EM 2012 verkauft wurde. Diese enthielt jeweils eine Zutat von jedem EM-Teilnehmerland. Unseren
-    klugen Köpfen fallen immer wieder neue Sachen zum experemtieren ein.
+    klugen Köpfen fallen immer wieder neue Sachen zum experementieren ein.
             </p><blockquote class="blockquote-reverse">Ahhh... eine Flasche Colanade. Die tu' ich mir jetzt einverleiben.
                 <footer>Käptn' Brassmann</footer></blockquote>
             <p class="lead"> Somit

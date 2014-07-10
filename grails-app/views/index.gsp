@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="fullpage"/>
+		<meta name="layout" content="main"/>
 		<title>Hipponade</title>
 	</head>
 	<body>
 
     <!-- Carousel
     ================================================== -->
+    <h1 class="marketing schnack" style="position:absolute; width: 100%; font-size: 500%; z-index: 10; color: #fff">Grüß dich auf Hippona.de</h1>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
+
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="item active" style="background-image: url('${assetPath(src: 'products/fritz-kola-breit.png')}')">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>Example headline.</h1>
-                        <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+
+            <div class="item active" style="background-image: url('${assetPath(src: 'products/start1.JPG')}');background-size: 100%;">
+                <div class="container"style="padding-bottom: 100px">
+                    <div class="carousel-caption" >
+                        <h1>Entdecke die Vielfalt</h1>
+                        <p class="lead">Hipponade bietet dir viele Getränke, um auch deinen Geschmack zu treffen</p>
                     </div>
                 </div>
             </div>
-            <div class="item" style="background-image: url('${assetPath(src: 'products/mischmasch-breit.png')}')">
+            <div class="item" style="background-image: url('${assetPath(src: 'products/start2.JPG')}');background-size: 100%;">
                 <div class="container">
                     <div class="carousel-caption">
-                        <h1>Another example headline.</h1>
+                        <h1>Erfahre die Geschichte dahinter.</h1>
                         <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+
                     </div>
                 </div>
             </div>
-            <div class="item" style="background-image: url('${assetPath(src: 'products/fritz-limo-breit.png')}')">
+            <div class="item" style="background-image: url('${assetPath(src: 'products/fritz-limo-breit.png')}');background-size: 100%;">
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>One more for good measure.</h1>
                         <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+
                     </div>
                 </div>
             </div>

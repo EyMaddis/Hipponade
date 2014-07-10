@@ -28,3 +28,4 @@ Original images:
 * [Recipe page cuba libre](https://www.flickr.com/photos/marie_astier/3600514684)
 * [Recipe page pie](https://www.flickr.com/photos/benimoto/2109973292)
 * [Recipe page pie 2](https://www.flickr.com/photos/djwtwo/8177516875)
+* [Start page image1](http://www.pressestelle.tu-berlin.de/fileadmin/a70100710/Medieninformationen/2007/Fruchtige_getraenke.JPG)
