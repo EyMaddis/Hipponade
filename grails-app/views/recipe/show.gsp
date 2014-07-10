@@ -67,7 +67,7 @@
     </div>
             
 
-        <div class="col-md-8 lead">
+        <div class="col-md-8">
             <g:if test="${recipeInstance?.instructions}">
                     <span id="instructions-label" class="property-label">
                         <div class="lead schnack">
@@ -75,20 +75,14 @@
                         </div>
                     </span>
                     
-                    <span class="property-value" aria-labelledby="instructions-label"><g:fieldValue
+                    <span class="property-value lead" aria-labelledby="instructions-label"><g:fieldValue
                             bean="${recipeInstance}" field="instructions"/></span>
 
             </g:if>
         </div>
-        <div class="col-md-4 lead">
-            <g:if test="${recipeInstance?.nutrition}">
-                    <span class="property-value" aria-labelledby="nutrition-label">
-                        <div class="lead schnack"><h2>Nährwerte</h2></div>
-                        je 100g ${recipeInstance.nutrition?.calories} kcal
-                        <g:link controller="nutritionFact" action="show" id="${recipeInstance?.nutrition?.id}" >(Details)</g:link>
-                    </span>
-            </g:if>
-        </div>
+        <g:if test="${recipeInstance?.nutrition}">
+            <g:render template="single" bean="${recipeInstance}" var="Instance" />
+        </g:if>
 
         <sec:ifLoggedIn>
         <g:form url="[resource: recipeInstance, action: 'delete']" method="DELETE">
