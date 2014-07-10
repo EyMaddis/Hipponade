@@ -18,7 +18,7 @@ background-repeat: no-repeat; background-size: 100%; margin-left: 0px">
             <h2 class="marketing">Dafür brauchst du</h2>
             <div class="col-md-6">
                 <g:each in="${recipeInstance.ingredients}" var="i">
-                    <p class="text-left">${i?.amount} ${i?.type}</p>
+                    <p class="text-right">${i?.amount} ${i?.type}</p>
                 </g:each>
             %{--<p class="text-left">${recipeInstance.product.name}</p>--}%
             </div>

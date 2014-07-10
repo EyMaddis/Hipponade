@@ -79,9 +79,9 @@
                 <div class="schnack">
                 <g:each in="${productInstance?.store}" status="i" var="store">
 
-                    <g:if test="${i == 5}"><div id="morestores" class="collapse"></g:if>
+                    <g:if test="${i == 4}"><div id="morestores" class="collapse"></g:if>
                         <p class="lead"><g:link controller="store" action="show" id="${store.id}">${store.name}</g:link></p>
-                    <g:if test="${i == productInstance.store.size() - 1 && i >= 5}"></div></g:if>
+                    <g:if test="${i == productInstance.store.size() - 1 && i >= 4}"></div></g:if>
 
 
                 </g:each>

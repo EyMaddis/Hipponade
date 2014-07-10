@@ -39,7 +39,7 @@
 
             </div>
             <div class="col-md-6">
-                <h2>Hier findest du</h2>
+                <h1>Hier findest du</h1>
                 <div class="schnack">
                     <g:each in="${storeInstance.products}" status="i" var="productInstance">
                         <p class="lead"><g:link controller="product" action="show" id="${productInstance.id}">${productInstance.name}</g:link></p>
