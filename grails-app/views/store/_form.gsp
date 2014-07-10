@@ -118,5 +118,5 @@
     </p>
     <div id="map-canvas" style="width:100%; height: 250px"></div>
 </div>
-<asset:javascript src="storeSelection" />
+<asset:javascript src="store/storeSelection" />
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
