@@ -26,3 +26,5 @@ Original images:
 * [Recipe page tequila sunrise 2](https://www.flickr.com/photos/49771112@N04/4564978494)
 * [Recipe page tequila sunrise 3](https://www.flickr.com/photos/reeselloyd/5062816750)
 * [Recipe page cuba libre](https://www.flickr.com/photos/marie_astier/3600514684)
+* [Recipe page pie](https://www.flickr.com/photos/benimoto/2109973292)
+* [Recipe page pie 2](https://www.flickr.com/photos/djwtwo/8177516875)

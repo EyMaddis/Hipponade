@@ -92,22 +92,23 @@ class BootStrap {
 
 
         //recipes
-        def rec = new Recipe(name: "Hipponadenkuchen", shortDescription: "einfacher, leckerer Kuchen",
+        new Recipe(name: "Hipponadenkuchen", nutrition: recnuts, shortDescription: "einfacher, leckerer Kuchen",
                 instructions: "Einfach alle Zutaten vermischen und auf einem gefetteten Backblech oder in eine Springform geben. " +
                         "Bei 180°C circa 40-45 Minuten backen. In der Springform ein wenig länger. " +
                         "Besonders lecker mit selbstgemachter Sahne obendrauf und einer Hipponade nebenbei!!")  //fantakuchen
-        rec.addToIngredients(recI1)
-        rec.addToIngredients(recI2)
-        rec.addToIngredients(recI3)
-        rec.addToIngredients(recI4)
-        rec.addToIngredients(recI5)
-        rec.addToIngredients(recI6)
-        rec.addToIngredients(recI7)
-        rec.addToTags(delicious)
-        rec.addToTags(simple)
-        rec.nutrition = recnuts
-        rec.addToImages(Image.findByFileName("hipponadenkuchen.jpg"))
-        rec.save(failOnError: true, flush: true)
+        .addToIngredients(recI1)
+        .addToIngredients(recI2)
+        .addToIngredients(recI3)
+        .addToIngredients(recI4)
+        .addToIngredients(recI5)
+        .addToIngredients(recI6)
+        .addToIngredients(recI7)
+        .addToTags(delicious)
+        .addToTags(simple)
+        .addToImages(Image.findByFileName("hipponadenkuchen.jpg"))
+        .addToImages(Image.findByFileName("pie.jpg"))
+        .addToImages(Image.findByFileName("pie2.jpg"))
+        .save(failOnError: true, flush: true)
 
         def hipponada = new Recipe(name: "Pina Hipponada", shortDescription: "leckerer Cocktail mit Hipponade!",
         instructions: "Zuerst den Rum in ein hübsches Cocktailglas geben. Dann Kokossirup und Sahne dazu! " +
