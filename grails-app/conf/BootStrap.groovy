@@ -1,5 +1,6 @@
 import hipponade.Image
 import hipponade.Ingredient
+import hipponade.News
 import hipponade.NutritionFact
 import hipponade.Product
 import hipponade.Recipe
@@ -138,6 +139,93 @@ class BootStrap {
         def Store s9 = new Store(name: "CITTI-Markt Kiel", street1: "Mühlendamm 1", city: "Kiel", zipCode: 24113, longitude: 10.099299, latitude: 54.313529)
         s9.save(flush: true, failOnError: true)
 
+        // news
+        new News(headline: 'Eine Markdown News!',
+                author: User.first(),
+                date: new Date((long)new Date().getTime() - 86400), // yesterday
+                content: "Super Überschrift\n" +
+                        "=========\n" +
+                        "\n" +
+                        "A identity site for a fake beverage manufacturer\n" +
+                        "\n" +
+                        "\n" +
+                        "A project for the course Webinformationsystems at the University of Kiel, summer term 2014\n" +
+                        "\n" +
+                        "Collaborators:\n" +
+                        "\n" +
+                        "* Maria-Anna Kandsorra\n" +
+                        "* Nelson Tavares de Sousa\n" +
+                        "* Mathis Neumann\n")
+                .addToTags(vegan)
+                .addToTags(refreshing)
+                .save(flush: true)
+        new News(headline: 'Eine weitere tolle Markdown News!',
+                author: User.first(),
+                content: "Dieses Beispiel stammt von [unexpected-vortices.com](http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html)\n" +
+                        "\n" +
+                        "Paragraphs are separated by a blank line.\n" +
+                        "\n" +
+                        "2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists\n" +
+                        "look like:\n" +
+                        "\n" +
+                        "  * this one\n" +
+                        "  * that one\n" +
+                        "  * the other one\n" +
+                        "\n" +
+                        "Note that --- not considering the asterisk --- the actual text\n" +
+                        "content starts at 4-columns in.\n" +
+                        "\n" +
+                        "> Block quotes are\n" +
+                        "> written like so.\n" +
+                        ">\n" +
+                        "> They can span multiple paragraphs,\n" +
+                        "> if you like.\n" +
+                        "\n" +
+                        "Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., \"it's all\n" +
+                        "in chapters 12--14\"). Three dots ... will be converted to an ellipsis.\n" +
+                        "\n" +
+                        "\n" +
+                        "\n" +
+                        "An h2 header\n" +
+                        "------------\n" +
+                        "\n" +
+                        "Here's a numbered list:\n" +
+                        "\n" +
+                        " 1. first item\n" +
+                        " 2. second item\n" +
+                        " 3. third item\n" +
+                        "\n" +
+                        "Note again how the actual text starts at 4 columns in (4 characters\n" +
+                        "from the left side). Here's a code sample:\n" +
+                        "\n" +
+                        "    # Let me re-iterate ...\n" +
+                        "    for i in 1 .. 10 { do-something(i) }\n" +
+                        "\n" +
+                        "As you probably guessed, indented 4 spaces. By the way, instead of\n" +
+                        "indenting the block, you can use delimited blocks, if you like:\n" +
+                        "\n" +
+                        "~~~\n" +
+                        "define foobar() {\n" +
+                        "    print \"Welcome to flavor country!\";\n" +
+                        "}\n" +
+                        "~~~\n" +
+                        "\n" +
+                        "(which makes copying & pasting easier). You can optionally mark the\n" +
+                        "delimited block for Pandoc to syntax highlight it:\n" +
+                        "\n" +
+                        "~~~python\n" +
+                        "import time\n" +
+                        "# Quick, count to ten!\n" +
+                        "for i in range(10):\n" +
+                        "    # (but not *too* quick)\n" +
+                        "    time.sleep(0.5)\n" +
+                        "    print i\n" +
+                        "~~~")
+                .addToTags(vegan)
+                .addToTags(simple)
+                .addToTags(sweet)
+                .save(flush: true)
+
         // products
         new Product(name: "Colanade", shortDescription: "Der frische Geschmack von Cola ohne Kompromisse",
                 description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. " +
@@ -232,7 +320,6 @@ class BootStrap {
         .addToTags(fairtrade)
         .addToTags(sour)
         .addToTags(refreshing)
-
         .save(flush: true, failOnError: true)
     }
     def destroy = {

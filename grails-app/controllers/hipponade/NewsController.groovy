@@ -10,7 +10,15 @@ class NewsController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond News.list(sort: 'date', order: 'desc'), model:[newsInstanceCount: News.count()]
+        def allNews = News.list(sort: 'date', order: 'desc')
+        def usedTags = new HashSet()
+        for (news in allNews) {
+            if (!news.tags) continue
+            for (tag in news.tags) {
+                usedTags.add(tag)
+            }
+        }
+        respond allNews, model: [newsInstanceCount: News.count(), usedTags: usedTags]
     }
 
     def show(News newsInstance) {

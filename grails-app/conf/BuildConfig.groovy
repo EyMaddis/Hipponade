@@ -75,5 +75,6 @@ grails.project.dependency.resolution = {
         compile ":coffee-asset-pipeline:1.7.0"
         //compile ":handlebars-asset-pipeline:1.3.0.3"
         runtime ':twitter-bootstrap:3.2.0'
+        runtime ":markdown:1.1.1"
     }
 }

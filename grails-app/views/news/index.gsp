@@ -1,5 +1,6 @@
 
 <%@ page import="hipponade.News" %>
+<%@ page import="hipponade.Tag" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,28 +13,16 @@
 <div class="schnack container marketing">
     <div class="col-md-8">
         <g:each in="${newsInstanceList}" status="i" var="newsInstance">
-            <div class="row news-post">
-                <g:if test="${i != 0}"><hr class="featurette-divider"> </g:if>
-                <div class="featurette">
-                    <h1>
-                        <g:link action="show" id="${newsInstance.id}">
-                            ${newsInstance.headline}
-                        </g:link>
-                    </h1>
-                    <p class="text-justify text-center">
-                        <% def content = raw(newsInstance.content)
-                         if(content != null)
-                            content = content.replaceAll('\n','<br />')
-                        %>
-${raw(content)}
-
-                    </p>
-                </div>
-            </div>
+            <g:render template="single" bean="${newsInstance}" var="newsInstance" />
         </g:each>
     </div>
     <div class="col-md-4 news-sidebar">
-        Sidebar!
+        <h3>Benutzte Tags in den News:</h3>
+        <g:each in="${usedTags}" status="i" var="tag">
+            <g:link controller="tag" action="show" id="${tag.id}" class="btn btn-default btn-xs">
+                ${tag?.encodeAsHTML()}
+            </g:link>
+        </g:each>
     </div>
 
 
