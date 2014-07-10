@@ -58,3 +58,12 @@ com_crashlytics_export_strings.xml
 
 # "temporary" build files
 /target
+
+
+
+# LATEX
+/*.aux
+/*.log
+/*.pdf
+/*.synctex.gz
+/*.toc
