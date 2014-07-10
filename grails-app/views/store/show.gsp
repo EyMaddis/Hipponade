@@ -74,13 +74,15 @@
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
 
-            map = new google.maps.Map(document.getElementById("map-canvas"),
-                    mapOptions);
+            map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-            var marker = new google.maps.Marker(
-                    { position: new google.maps.LatLng(${storeInstance.latitude}, ${storeInstance.longitude}),
+            console.log(new google.maps.LatLng(${storeInstance.latitude}, ${storeInstance.longitude}));
+            var marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(${storeInstance.latitude}, ${storeInstance.longitude}),
                         map: map,
-                        title: "${fieldValue(bean: storeInstance, field: "name")}"});
+                        title: "${fieldValue(bean: storeInstance, field: "name")}"
+                    }
+            );
         }
 
 
