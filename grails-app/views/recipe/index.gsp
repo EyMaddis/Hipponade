@@ -13,7 +13,12 @@
 
 
     <div id="list-recipe" class="content scaffold-list" role="main">
-        <h1>Rezeptideen</h1>
+        <h1>Rezeptideen
+            <small>
+                Cocktail oder doch Nachtisch für die Party?
+            </small>
+        </h1>
+
 
  %{-- ZenCoding: (div.col-md-3>(div.row.panel.panel-default>(div.panel-heading>h1{Rezept})+div.recipe-content.panel-body{Lorem Ipsum...})*3)*4 --}%
         <div class="pinterest row">

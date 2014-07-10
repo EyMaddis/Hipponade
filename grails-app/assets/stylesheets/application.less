@@ -106,10 +106,35 @@ a{
 }
 
 .pinterest {
+  margin-top: 30px;
   .panel-heading {
     padding: 10px 7px;
     h3 {
       margin: 0px inherit;
     }
+  }
+}
+
+.products {
+  text-align: center;
+  vertical-align: top;
+  .product {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 25%;
+    padding: 5px 10px;
+    vertical-align: top;
+    .product-image {
+      height: 130px;
+      img {
+        max-height: 100%;
+      }
+    }
+
+  }
+}
+@media (max-width: 990px) {
+  .products .product .product-image {
+    height: 75px;
   }
 }

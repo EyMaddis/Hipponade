@@ -10,14 +10,15 @@
 <body>
 <div id="list-product" class="schnack content scaffold-list marketing container" role="main">
 
-    <div class="row">
+    <div class="row products">
         <g:each in="${productInstanceList}" status="i" var="productInstance">
 
-            <div class="col-md-3">
-                 <g:link action="show" id="${productInstance.id}">
-                     <img class="img-responsive" src="${createLink(uri: '/')}assets/products/${productInstance?.images[0].fileName}">
-                 </g:link>
-
+            <div class="product">
+                <div class="product-image">
+                     <g:link action="show" id="${productInstance.id}">
+                         <img class="img-responsive" src="${createLink(uri: '/')}assets/products/${productInstance?.images[0].fileName}">
+                     </g:link>
+                </div>
                 <div class="caption">
                     <h2>
                         <g:link action="show" id="${productInstance.id}">
@@ -31,8 +32,8 @@
                 </div>
             </div>
         </g:each>
-
     </div>
+    <hr />
     <sec:ifLoggedIn>
         <p class="btn btn-default"> <g:link class="create" action="create">Produkt anlegen</g:link></p>
     </sec:ifLoggedIn>
