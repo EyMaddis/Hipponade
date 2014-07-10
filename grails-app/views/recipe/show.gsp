@@ -11,7 +11,6 @@
 <body>
 <div class="row jumbotron" style="background-image: url(${createLink(uri: '/')}assets/products/<g:if test="${recipeInstance?.images}">${recipeInstance?.images[0].fileName}</g:if><g:else>stardart.png</g:else>);
 background-repeat: no-repeat; background-size: 100%; margin-left: 0px">
-
     <h1 class="marketing">${recipeInstance.name}</h1>
     <div class="col-md-4 col-md-offset-4 schnack">
         <div class="row thumbnail">
@@ -74,6 +73,8 @@ background-repeat: no-repeat; background-size: 100%; margin-left: 0px">
             </div>
         </g:if>
     </p>
+    <g:link controller="recipe" action="print" id="${recipeInstance.id}" target="_blank" class=""><span class="btn btn-default glyphicon glyphicon-print"></span></g:link>
+
     </div>
 </div>
 
