@@ -94,7 +94,7 @@
         </div>
     <div class="schnack">
         <h3>Tags</h3>
-        <div class="schanck">
+        <div class="schnack">
     <g:each in="${productInstance.tags}" status="i" var="tag">
         <g:link controller="tag" action="show" id="${tag.id}" class="btn btn-default btn-xs">
             ${tag?.encodeAsHTML()}

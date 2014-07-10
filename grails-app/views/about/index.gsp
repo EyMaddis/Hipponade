@@ -34,7 +34,7 @@
                 <footer>Käptn' Brassmann</footer></blockquote>
             <p class="lead"> Somit
         hast du die Möglichkeit dich immer wieder auf neue Geschmacksreisen zu machen. Unser Hauptziel ist es dabei dir
-    immer 4 Geschmacksrichtungen anzubieten. So hast du sowohl Überblick als auch eine geeignete Auswahl. Unter Neuigkeiten
+    immer 3 Geschmacksrichtungen anzubieten. So hast du sowohl Überblick als auch eine geeignete Auswahl. Unter Neuigkeiten
         verraten wir dir immer was es spannendes Neues gibt.
     </p>
             <div class="hash" id="erlebe"></div>
@@ -49,7 +49,7 @@
     <p class="lead">
         Die Herstellung unserer Hipponade ist nicht das einfachste auf der Welt. Für dich scheuen wir keine Kosten und Mühen
         um dir etwas anbieten zu können, was qualitativ auf höchstem Niveau liegt. Es beginnt bei der Auswahl der Zutaten,
-        über die unser Lieferanten, bis hin zur Gestaltung unserer Produkte. Wir legen auch auf kleinste Details viel Wert,
+        über die unserer Lieferanten, bis hin zur Gestaltung unserer Produkte. Wir legen auch auf kleinste Details viel Wert,
         damit dir der beste Genuß geboten wird.
         </p>
            <blockquote class="blockquote-reverse">Die Hipponade steht immer an erster Stelle des Problems, das gelöst werden will.
