@@ -10,16 +10,7 @@
 
 <body>
 <div class="schnack container">
-    <div class="nav" role="navigation">
-        <ul>
-            <a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a>
-            <sec:ifLoggedIn>
-            <br>
-                <g:link class="create" action="create"><g:message code="default.new.label"
-                                                                  args="[entityName]"/></g:link>
-            </sec:ifLoggedIn>
-        </ul>
-    </div>
+
 
     <div id="list-recipe" class="content scaffold-list" role="main">
         <h1>Rezeptliste</h1>
