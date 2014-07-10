@@ -68,7 +68,7 @@ background-repeat: no-repeat; background-size: 100%; margin-left: 0px">
                 </label>
                 <div class="col-sm-10 text-left">
                     <g:each in="${recipeInstance.tags}" var="t">
-                        <g:link controller="tag" action="show" id="${t.id}" class="btn btn-default btn-xs">${t?.encodeAsHTML()}</g:link>
+                        <g:link controller="tag" action="show" id="${t.id}" class="btn btn-default btn-xs">#${t?.encodeAsHTML()}</g:link>
                     </g:each>
                 </div>
             </div>

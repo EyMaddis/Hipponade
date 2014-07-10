@@ -7,15 +7,10 @@
         </h1>
 
         <g:if test="${newsInstance?.tags}">
-            <div class="form-group row">
-                <label class="col-sm-2 control-label text-right">
-                    Tags:
-                </label>
-                <div class="col-sm-10 text-left">
-                    <g:each in="${newsInstance.tags}" var="t">
-                        <g:link controller="tag" action="show" id="${t.id}" class="btn btn-default btn-xs">${t?.encodeAsHTML()}</g:link>
-                    </g:each>
-                </div>
+            <div class="row text-center" style="margin-bottom: 10px">
+                <g:each in="${newsInstance.tags}" var="t">
+                    <g:link controller="tag" action="show" id="${t.id}" class="btn btn-default btn-xs">#${t?.encodeAsHTML()}</g:link>
+                </g:each>
             </div>
         </g:if>
         %{--<hr />--}%

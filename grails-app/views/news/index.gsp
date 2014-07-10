@@ -11,19 +11,19 @@
 
 <body>
 <div class="schnack container marketing">
-    <div class="col-md-8">
+    <div>  %{--class="col-md-8"--}%
         <g:each in="${newsInstanceList}" status="i" var="newsInstance">
             <g:render template="single" bean="${newsInstance}" var="newsInstance" />
         </g:each>
     </div>
-    <div class="col-md-4 news-sidebar">
-        <h3>Benutzte Tags in den News:</h3>
-        <g:each in="${usedTags}" status="i" var="tag">
-            <g:link controller="tag" action="show" id="${tag.id}" class="btn btn-default btn-xs">
-                ${tag?.encodeAsHTML()}
-            </g:link>
-        </g:each>
-    </div>
+    %{--<div class="col-md-4 news-sidebar">--}%
+        %{--<h3>Benutzte Tags in den News:</h3>--}%
+        %{--<g:each in="${usedTags}" status="i" var="tag">--}%
+            %{--<g:link controller="tag" action="show" id="${tag.id}" class="btn btn-default btn-xs">--}%
+                %{--#${tag?.encodeAsHTML()}--}%
+            %{--</g:link>--}%
+        %{--</g:each>--}%
+    %{--</div>--}%
 
 
     <sec:ifLoggedIn>

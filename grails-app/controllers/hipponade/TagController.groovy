@@ -16,6 +16,11 @@ class TagController {
     }
 
     def show(Tag tagInstance) {
+        def products = Product.withCriteria {
+            tags {
+                inList("id", [tagInstance.id])
+            }
+        }
         def news = News.withCriteria {
             tags {
                 inList("id", [tagInstance.id])
@@ -34,7 +39,7 @@ class TagController {
 
 //        def recipes = Recipe.findAllByTags(tagInstance)
 //        def events = Event.findAllByTags(tagInstance)
-        respond tagInstance, model: [news: news, recipes: recipes, events: events]
+        respond tagInstance, model: [products: products, news: news, recipes: recipes, events: events]
     }
 
     def create() {
