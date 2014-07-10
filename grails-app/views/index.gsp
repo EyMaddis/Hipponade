@@ -8,7 +8,7 @@
 
     <!-- Carousel
     ================================================== -->
-    <h1 class="marketing" style="padding-top:80px;position:absolute; width: 100%; font-size: 500%; z-index: 10; color: rgba(255, 255, 255, 0.9)">Grüß dich auf Hippona.de</h1>
+    <h1 class="marketing" style="padding-top:80px;position:absolute; width: 100%; font-size: 500%; z-index: 10; color: rgba(255, 255, 255, 0.9)"></h1>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
 

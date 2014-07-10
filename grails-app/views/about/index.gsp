@@ -35,13 +35,13 @@
             <p class="lead"> Somit
         hast du die Möglichkeit dich immer wieder auf neue Geschmacksreisen zu machen. Unser Hauptziel ist es dabei dir
     immer 3 Geschmacksrichtungen anzubieten. So hast du sowohl Überblick als auch eine geeignete Auswahl. Unter Neuigkeiten
-        verraten wir dir immer was es spannendes Neues gibt.
+        verraten wir dir immer was es spannendes Neues zu Hipponade gibt.
     </p>
             <div class="hash" id="erlebe"></div>
     <h2>Erlebe es</h2>
     <p class="lead">
         Wir lassen dich natürlich nicht im Stich, wenn es um Unternehmungen geht. Wir bieten dir nicht nur Getränke an,
-        Hipponade findet man immer wieder auf Events. Von <i>Hipponade am Ring</i> bis <i>After-Ski-Nade</i> sind wir überall vertreten
+        du kannst auch immer wieder auf Events finden. Von <i>Hipponade am Ring</i> bis <i>After-Ski-Nade</i> sind wir überall vertreten
         und mischen uns auch bei den ganz Großen mit ein, damit du uns nicht vermissen musst.
     </p>
             <div class="hash" id="das"></div>
