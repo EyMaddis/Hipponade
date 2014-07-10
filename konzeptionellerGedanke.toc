@@ -7,6 +7,7 @@
 \contentsline {subsection}{\numberline {2.4}Fritz Kola}{5}
 \contentsline {subsection}{\numberline {2.5}Mate Drinks}{5}
 \contentsline {subsection}{\numberline {2.6}MyMuesli}{5}
+\contentsline {subsection}{\numberline {2.7}Zusammenfassung}{5}
 \contentsline {section}{\numberline {3}Medienobjekte}{5}
-\contentsline {section}{\numberline {4}Story-Diagramm}{5}
-\contentsline {section}{\numberline {5}Modellierung der Datenbank}{5}
+\contentsline {section}{\numberline {4}Story-Diagramm}{6}
+\contentsline {section}{\numberline {5}Modellierung der Datenbank}{6}
