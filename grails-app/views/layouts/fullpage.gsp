@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><g:layoutTitle default="Grails"/></title>
+    <title><g:layoutTitle default="Hipponade - Frisch wie der Morgentau"/></title>
     <asset:stylesheet src="application.css"/>
     <g:layoutHead/>
 </head>
