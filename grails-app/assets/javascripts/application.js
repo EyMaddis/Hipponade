@@ -7,7 +7,6 @@
 //
 //= require jquery
 //= require bootstrap
-//= require blur
 // = require_tree .
 //= require_self
 

@@ -137,3 +137,11 @@ a{
     height: 75px;
   }
 }
+@media print {
+  footer {
+    display: none;
+  }
+  a[href]:after {
+    content: none;
+  }
+}
