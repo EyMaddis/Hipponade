@@ -19,4 +19,8 @@ class Event{
         dateCreated display: false, editable: false
 
     }
+
+    static mapping = {
+        description type: 'text'
+    }
 }

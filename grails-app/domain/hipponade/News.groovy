@@ -15,4 +15,8 @@ class News {
         date display: false
         author nullable: false
     }
+
+    static mapping = {
+        content type: 'text'
+    }
 }

@@ -44,15 +44,35 @@ class BootStrap {
         def sweet = new Tag(label: "süß").save(flush: true)
         def sour = new Tag(label: "sauer").save(flush: true)
         def sun = new Tag(label: "sonnig").save(failOnError: true, flush: true)
+        def cocktails = new Tag(label: "Cocktail").save(failOnError: true, flush: true)
+        def party = new Tag(label: "Party").save(failOnError: true, flush: true)
+        def concert = new Tag(label: "Konzert").save(failOnError: true, flush: true)
+        def fun = new Tag(label: "Spaß").save(failOnError: true, flush: true)
 
         //events
         def e = new Event(name:"Hipponade bei Strandparty", description:"Heute geht die Strandparty mit HIPPONADE ab!!" +
                 " Seid dabei, wenn wir mit den neusten Hits am Strand chillen. Freut euch auf HIPPONADE und jede Menge Spaß!!",
-                location: "Strand Brasilien", date: new Date(), author: user);
+                location: "Strand Brasilien", date: new Date(), author: user, tags: [sun,fun, party], images: [Image.findByFileName("strandparty.jpg")]);
         e.addToTags(sun)
         if(e.validate()) e.save(flush: true)
         new Event(name: "Mit Hipponade nach Flensburg", description: "Sei dabei, wenn Hipponade sich am Kieler Bahnhof trifft und nach Flensburg fährt! DAS Event von dem alle sprechen! SOMMER, SONNE, FLENSBURG!!",
-                location: "Flensburg", date: new Date(), author: user, images: [Image.findByFileName("flensburgstrand.jpg")], tags: [refreshing, sun]).save(failOnError: true, flush: true)
+                location: "Flensburg", date: new Date(), author: user, images: [Image.findByFileName("felsnburgstrand.jpg")], tags: [refreshing, sun]).save(failOnError: true, flush: true)
+        new Event(name: "Hipponade Strandfestival", description: "Bald beginnt das Hipponade Strandfestival! \n" +
+                "Wir bieten euch jede Menge Spaß, gute Musik und tolle Getränke. Die Karten sind bereits ausverkauft, wir freuen uns also auf euch. \n" +
+                "Bringt gute Laune mit und freut euch auf folgende Music-Acts:\n" +
+                "*Backstreet Boys\n" +
+                "*Bro'Sis\n" +
+                "*No Angels\n" +
+                "*Overground\n" +
+                "*Preluders\n" +
+                "*Nu Pagadi\n" +
+                "*Monrose\n" +
+                "*Room2012\n" +
+                "*Queensberry\n" +
+                "*LaVive\n" +
+                "Sichert euch jetzt schon die Shirts des Strandfestivals und chillt mit einer Hipponade bis das Festival beginnt!",
+                location: "Falckensteiner Strand", date: new Date(), author: user,
+                images: [Image.findByFileName("strandfestival.jpg")], tags: [sun, fun, concert, party, cocktails]).save(failOnError: true, flush: true)
 
         //nutritionFacts
         def nuts = new NutritionFact(fat: 0, carbs: 4, protein: 0, calories: 40, fiber: 0)  //for a -nade
