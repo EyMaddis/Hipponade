@@ -1,7 +1,7 @@
 <div class="row news-post">
     <div class="featurette">
         <h1>
-            <g:link action="show" id="${newsInstance.id}">
+            <g:link controller="news" action="show" id="${newsInstance.id}">
                 ${newsInstance.headline}
             </g:link>
         </h1>
@@ -14,7 +14,7 @@
             </div>
         </g:if>
         %{--<hr />--}%
-        <div class="text-justify text-center panel panel-default news-content">
+        <div class="text-justify panel panel-default news-content">
             %{--<% def content = raw(newsInstance.content)--}%
             %{--if(content != null)--}%
             %{--content = content.replaceAll('\n','<br />')--}%
