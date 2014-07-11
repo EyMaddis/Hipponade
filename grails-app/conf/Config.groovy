@@ -149,6 +149,8 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
     '/store/create':                  ['permitAll'],
     '/store/save':                    ['permitAll'],
     '/nutritionFact/show':            ['permitAll'],
+    '/event/show':                    ['permitAll'],
+    '/event/index':                   ['permitAll'],
 	'/**/favicon.ico':                ['permitAll'],
 	'/assets/**':                     ['permitAll'],
     '/**/**':                         ['ROLE_ADMIN']

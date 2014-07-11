@@ -34,11 +34,6 @@ class BootStrap {
                 img.save(flush: true, failOnError: true)
 
         }
-        def e = new Event(name:"Hipponade bei Strandparty", description:"Heute geht die Strandparty mit HIPPONADE ab!!" +
-                " Seid dabei, wenn wir mit den neusten Hits am Strand chillen. Freut euch auf HIPPONADE und jede Menge Spaß!!",
-                location: "Strand Brasilien", date: new Date());
-        if(e.validate()) e.save()
-
         //tags
         def vegan = new Tag(label: "vegan").save(flush: true)
         def bio = new Tag(label: "bio").save(flush: true)
@@ -48,6 +43,16 @@ class BootStrap {
         def simple = new Tag(label: "einfach").save(flush: true)
         def sweet = new Tag(label: "süß").save(flush: true)
         def sour = new Tag(label: "sauer").save(flush: true)
+        def sun = new Tag(label: "sonnig").save(failOnError: true, flush: true)
+
+        //events
+        def e = new Event(name:"Hipponade bei Strandparty", description:"Heute geht die Strandparty mit HIPPONADE ab!!" +
+                " Seid dabei, wenn wir mit den neusten Hits am Strand chillen. Freut euch auf HIPPONADE und jede Menge Spaß!!",
+                location: "Strand Brasilien", date: new Date(), author: user);
+        e.addToTags(sun)
+        if(e.validate()) e.save(flush: true)
+        new Event(name: "Mit Hipponade nach Flensburg", description: "Sei dabei, wenn Hipponade sich am Kieler Bahnhof trifft und nach Flensburg fährt! DAS Event von dem alle sprechen! SOMMER, SONNE, FLENSBURG!!",
+                location: "Flensburg", date: new Date(), author: user, images: [Image.findByFileName("flensburgstrand.jpg")], tags: [refreshing, sun]).save(failOnError: true, flush: true)
 
         //nutritionFacts
         def nuts = new NutritionFact(fat: 0, carbs: 4, protein: 0, calories: 40, fiber: 0)  //for a -nade
