@@ -23,7 +23,7 @@
             </fieldset>
         </g:form>
     </sec:ifLoggedIn>
-    <div> %{-- col-md-8 --}
+    <div> %{-- col-md-8 --}%
         <g:render template="single" bean="${newsInstance}" var="newsInstance" />
     </div>
     %{--<div class="col-md-4 news-sidebar">--}%

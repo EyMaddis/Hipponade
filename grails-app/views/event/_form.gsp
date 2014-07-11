@@ -19,7 +19,7 @@
 		<span class="required-indicator">*</span>
 	</label>
     <div class="col-sm-10">
-        <g:textField class="form-control" name="description" required="" value="${eventInstance?.description}"/>
+        <g:textArea class="form-control" name="description" rows="10" required="" >${eventInstance?.description}</g:textArea>
 
     </div>
 </div>

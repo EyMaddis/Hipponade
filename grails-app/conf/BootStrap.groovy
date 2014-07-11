@@ -59,17 +59,17 @@ class BootStrap {
                 location: "Flensburg", date: new Date(), author: user, images: [Image.findByFileName("felsnburgstrand.jpg")], tags: [refreshing, sun]).save(failOnError: true, flush: true)
         new Event(name: "Hipponade Strandfestival", description: "Bald beginnt das Hipponade Strandfestival! \n" +
                 "Wir bieten euch jede Menge Spaß, gute Musik und tolle Getränke. Die Karten sind bereits ausverkauft, wir freuen uns also auf euch. \n" +
-                "Bringt gute Laune mit und freut euch auf folgende Music-Acts:\n" +
-                "*Backstreet Boys\n" +
-                "*Bro'Sis\n" +
-                "*No Angels\n" +
-                "*Overground\n" +
-                "*Preluders\n" +
-                "*Nu Pagadi\n" +
-                "*Monrose\n" +
-                "*Room2012\n" +
-                "*Queensberry\n" +
-                "*LaVive\n" +
+                "Bringt gute Laune mit und freut euch auf folgende Music-Acts:\n\n" +
+                "* Backstreet Boys\n" +
+                "* Bro'Sis\n" +
+                "* No Angels\n" +
+                "* Overground\n" +
+                "* Preluders\n" +
+                "* Nu Pagadi\n" +
+                "* Monrose\n" +
+                "* Room2012\n" +
+                "* Queensberry\n" +
+                "* LaVive\n\n" +
                 "Sichert euch jetzt schon die Shirts des Strandfestivals und chillt mit einer Hipponade bis das Festival beginnt!",
                 location: "Falckensteiner Strand", date: new Date(), author: user,
                 images: [Image.findByFileName("strandfestival.jpg")], tags: [sun, fun, concert, party, cocktails]).save(failOnError: true, flush: true)
