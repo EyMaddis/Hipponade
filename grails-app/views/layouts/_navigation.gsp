@@ -18,6 +18,7 @@
                     <ul class="nav navbar-nav">
                         %{-- Selbst geschriebenes Navigations Tag --}%
                         <g:navigationLink controller="news">Neuigkeiten</g:navigationLink>
+                        <g:navigationLink controller="event">Events</g:navigationLink>
                         <g:navigationLink controller="about" action="index">Über Uns</g:navigationLink>
                         <g:navigationLink controller="about" action="story">Geschichte</g:navigationLink>
                         <g:navigationLink controller="recipe">Rezepte</g:navigationLink>

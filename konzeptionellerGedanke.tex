@@ -63,6 +63,8 @@ Am meisten sticht auf dieser Seite die Navigation hervor. Diese hat eine geringe
 
 Es werden hier gezielt nicht sofort Informationen zu den Produkten angeboten. Der Besucher soll nicht die Seite öffnen, gewünschte Informationen finden und dann diese wieder verlassen. Vielmehr wird hier versucht, den Besucher gezielt erst Informationen rund um das Unternehmen zu präsentieren. Dies fällt besonders in der Struktur der Navigationsleiste auf, in der die Getränke als letzter Punkt aufgeführt sind. Da es heutzutage in der Natur des Menschen liegt, von links nach rechts Informationen zu sammeln, werden ihm hier zuerst die Informationen zu Rezepten und Veranstaltungen auffallen. Dies trifft natürlich nur auf die europäische Kultur zu, was jedoch bei uns keine Bedeutung findet, da wir uns lediglich auf den deutschen Raum beschränken.
 
+\subsection{Alnatura} % Alnatura
+
 \subsection{Bacardi - www.bacardi.de} % Bacardi
 Hier fällt, wie bereits bei Absolut, die einfache Navigation auf. Die geringe Anzahl an Ebenen vereinfacht das Zurechtfinden auf der Seite. Es wird eine Suche angeboten, die von jeder Seite erreichbar ist. Negativ fällt hier auf, dass die Seite an einigen Stellen "überladen" wirkt. Videos und zu viele Designelemente führen zu einer trägen Informationswahrnehmung. Hier läuft Bacardi Gefahr Kunden zu "langweilen" oder zu verschrecken. Dies gilt es für uns zu vermeiden.
 
@@ -106,6 +108,7 @@ Anhand der Analyse sind uns somit Punkte aufgefallen, die vermieden werden sollt
 	\item{Geschichte des Unternehmens}
 	\item{Klarer Fokus auf Zielgruppeninteresse}
 	\item{Indirekte Informationsführung}
+	\item{Jedes Produkt hat individuelle Design Besonderheiten}
 \end{itemize}
 \end{itemize}
 
@@ -131,35 +134,46 @@ Aus der Analyse und unserem Rahmen folgen bestimmte Objekte die es abzubilden gi
 \begin{itemize}
 \item Bild
 
-Auf der Seite sollen Bilder dargestellt werden. Diese können von einem Admin organisiert werden.
+Auf der Seite sollen Bilder dargestellt werden und alle weiteren Medienobjekte visuell erweitern. Diese können von einem Admin organisiert werden.
 
 \item Rezept
 
-Für unsere Produkte werden Rezeptvorschläge angegeben.
+Um den Besucher zum wiederholten Aufrufen zu motivieren und die Kundenbindung zu stärken, werden Rezepte angeboten, welche unsere Produkte in irgendeiner Form mit einbeziehen.
+Fokus liegt hierbei noch auf die Nährwerte des Rezept als Teil unserer gesunden Identity.
 
 \item Zutat
 
-Zutaten werden mit Rezepten und Produkten in Verbindung verbracht. Dies ermöglicht bspw. das Filtern nach bestimmten Zutaten.
+Zutaten werden mit Rezepten und Produkten in Verbindung verbracht. Dies soll bspw. das Filtern nach bestimmten Zutaten ermöglichen (nicht implementiert, siehe unten).
 
-\item Verkaufsstellen
+\item Verkaufsstellen/Händler
 
-Verkaufsstellen zeigen an, wo bestimmte Produkte erworben werden können. Großhändler haben hier die Möglichkeit selbst solche einzutragen.
+Da ein so kleiner 'Szene-Getränke'-Hersteller eventuell nicht in jedem Supermarkt zu finden ist, möchten wir dem Besucher die Möglichkeit bieten schnell Geschäfte zu finden, die Hipponade Getränke verkaufen. 
+Dabei ist vor allem der Ort wichtig, welcher auch auf einer Interaktiven Karte dargestellt werden soll.
+Händler haben hier die Möglichkeit selbst solche einzutragen, geben ihre Adresse an und wir berechnen dann daraus automatisch Koordinatendaten für die Kartendarstellung.
 
 \item Tag
 
-Produkte, Rezepte, sowie News und Veranstaltungen werden mit Tags versehen. Dies ermöglicht die Realisierung einer Suchfunktion auf der Seite.
+Tags sind kurze Schlagworte, zur Gruppierung von Inhalten.
+Produkte, Rezepte, sowie News und Veranstaltungen werden mit Tags versehen. Dies ermöglicht die Realisierung einer Suchfunktion auf der Seite. 
+Darüber hinaus sind sie dem versiertem Social Media Nutzer, was unsere Zielgruppe größtenteils ist, als 'Hashtags' (mit anführendem \#) bekannt, wie sie bei Facebook, Twitter, etc. genutzt werden. 
+Sie erlauben einfache und schnelle Gruppierung, ohne das eine aufwendige Kategorie-Struktur implementiert werden muss, da dies mit dem Vorsatz der flachen Navigation brechen würde.
 
 \item Veranstaltung
 
-Veranstaltungen gehören zu unserem Konzept. Diese dienen der Kundenbindung.
+Um sich als 'Szene-Getränk' zu etablieren müssen wir dort agieren, wo wir den Großteil unserer Zielgruppe vermuten.
+Dies sind vor allem Veranstaltungen, wie Partys und Konzerte, die wir einerseits organisieren möchten, aber auch durch Sponsoring als Marketing Plattform nutzen.
 
 \item Produkt
 
-Die Produkte des Unternehmens sollen auf der Seite präsentiert werden.
+Herzstück der Firma sind natürlich die Getränke.
+Hierbei legen wir im Zuge unserer Identity Fokus auf die Darstellung der Qualitäts und Gesundheitsaspekte unserer Getränke. Wir stellen also Nährwertangaben, Zutaten, sowie Eigenschaften wie 'Bio', 'vegan', 'Fair Trade' etc. hervor.
+Letzteres machen wir indirekt über die Verwendung entsprechender Tags.
+Um die Individualität der Produkte hervorzuheben, bieten wir die Möglichkeit 
 
 \item News
 
-Ähnlich zu Veranstaltung gehört dies zum konzeptionellen Gedanken der Seite.
+Wir haben die Aktualität der Seiten als einen zentralen Aspekt bei der Usability von Webseiten in der Zielbranche festgestellt.
+Aus diesem Grund bieten wir ebenfalls eine Neuigkeiten Seite, die regelmäßig redaktionell gepflegte Inhalte bieten soll.
 
 \item Benutzer
 
@@ -179,4 +193,21 @@ Nährwerte werden Produkten und Rezepten zugeordnet. Dies dient dem erweiterten 
 \section{Modellierung der Datenbank} % DB
 
 \section{Zusammenfassung} % Zusammenfassung
+
+\section{Besonderheiten der Implementation}
+
+\begin{itemize}
+	\item Wir bieten in den Neuigkeiten die Möglichkeit für die Redaktion Markdown~\footnote{\url{http://de.wikipedia.org/wiki/Markdown}} 
+\end{itemize}
+
+\section{Einschränkungen der Implementation}
+
+Wir gehen kurz auf einige Aspekte der Seite ein, die wir nur umsetzen würden, wenn mehr Zeit zur Verfügung stehen würde und die ECTS dieser Zeit entsprechen würden.
+
+% was passte zeitlich nicht mehr rein
+%TODO 
+\begin{itemize}
+\item Keine Händlerübersicht mit 'Händler in meiner Nähe'-Suche
+\item Beim jeglichen administrativen Arbeiten haben wir auf Bedienkomfortfunktionen verzichtet unser Fokus ist ganz klar auf dem was der Endkunde/-Benutzer zu sehen bekommt.
+\end{itemize}
 \end{document}
