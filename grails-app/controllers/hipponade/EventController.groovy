@@ -12,7 +12,7 @@ class EventController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Event.list(sort: 'date', order: 'desc'), model:[eventInstanceCount: Event.count()]
+        respond Event.list(sort: 'date', order: 'asc'), model:[eventInstanceCount: Event.count()]
     }
 
     def show(Event eventInstance) {

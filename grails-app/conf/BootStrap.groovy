@@ -48,15 +48,17 @@ class BootStrap {
         def party = new Tag(label: "Party").save(failOnError: true, flush: true)
         def concert = new Tag(label: "Konzert").save(failOnError: true, flush: true)
         def fun = new Tag(label: "Spaß").save(failOnError: true, flush: true)
+        def dessert = new Tag(label: "Dessert").save(failOnError: true, flush: true)
+        def cake = new Tag(label: "Kuchen").save(failOnError: true, flush: true)
 
         //events
         def e = new Event(name:"Hipponade bei Strandparty", description:"Heute geht die Strandparty mit HIPPONADE ab!!" +
                 " Seid dabei, wenn wir mit den neusten Hits am Strand chillen. Freut euch auf HIPPONADE und jede Menge Spaß!!",
-                location: "Strand Brasilien", date: new Date(), author: user, tags: [sun,fun, party], images: [Image.findByFileName("strandparty.jpg")]);
+                location: "Strand Brasilien", date: new Date((long)new Date().getTime() + 86864400), author: user, tags: [sun,fun, party], images: [Image.findByFileName("strandparty.jpg")]);
         e.addToTags(sun)
         if(e.validate()) e.save(flush: true)
         new Event(name: "Mit Hipponade nach Flensburg", description: "Sei dabei, wenn Hipponade sich am Kieler Bahnhof trifft und nach Flensburg fährt! DAS Event von dem alle sprechen! SOMMER, SONNE, FLENSBURG!!",
-                location: "Flensburg", date: new Date(), author: user, images: [Image.findByFileName("felsnburgstrand.jpg")], tags: [refreshing, sun]).save(failOnError: true, flush: true)
+                location: "Flensburg", date: new Date((long)new Date().getTime() + 8541256400), author: user, images: [Image.findByFileName("felsnburgstrand.jpg")], tags: [refreshing, sun]).save(failOnError: true, flush: true)
         new Event(name: "Hipponade Strandfestival", description: "Bald beginnt das Hipponade Strandfestival! \n" +
                 "Wir bieten euch jede Menge Spaß, gute Musik und tolle Getränke. Die Karten sind bereits ausverkauft, wir freuen uns also auf euch. \n" +
                 "Bringt gute Laune mit und freut euch auf folgende Music-Acts:\n\n" +
@@ -71,7 +73,7 @@ class BootStrap {
                 "* Queensberry\n" +
                 "* LaVive\n\n" +
                 "Sichert euch jetzt schon die Shirts des Strandfestivals und chillt mit einer Hipponade bis das Festival beginnt!",
-                location: "Falckensteiner Strand", date: new Date(), author: user,
+                location: "Falckensteiner Strand", date: new Date((long)new Date().getTime() + 851640590), author: user,
                 images: [Image.findByFileName("strandfestival.jpg")], tags: [sun, fun, concert, party, cocktails]).save(failOnError: true, flush: true)
 
         //nutritionFacts
@@ -133,6 +135,8 @@ class BootStrap {
         .addToImages(Image.findByFileName("hipponadenkuchen.jpg"))
         .addToImages(Image.findByFileName("pie.jpg"))
         .addToImages(Image.findByFileName("pie2.jpg"))
+        .addToTags(cake)
+        .addToTags(dessert)
         .save(failOnError: true, flush: true)
 
         def hipponada = new Recipe(name: "Pina Hipponada", shortDescription: "leckerer Cocktail mit Hipponade!",
@@ -141,6 +145,7 @@ class BootStrap {
         hipponada.addToTags(simple)
         hipponada.addToTags(delicious)
         hipponada.addToTags(sweet)
+        hipponada.addToTags(cocktails)
         hipponada.addToIngredients(recl9)
         hipponada.addToIngredients(recl10)
         hipponada.addToIngredients(recl11)
@@ -149,11 +154,11 @@ class BootStrap {
         hipponada.save(failOnError: true, flush: true)
 
 
-        def Recipe cubanaLibre = new Recipe(name: "Cubanade Libre", instructions: "1. Colanade 2. Rum")
+        def Recipe cubanaLibre = new Recipe(name: "Cubanade Libre", instructions: "1. Colanade 2. Rum", tags: [cocktails,refreshing,])
         .addToImages(Image.findByFileName('cubalibre.jpg'))
         .save(flush: true, failOnError: true)
 
-        def Recipe sunrise = new Recipe(name: "Hipponade Sunrise", instructions: "1. Colanade 2. Cherrynade")
+        def Recipe sunrise = new Recipe(name: "Hipponade Sunrise", instructions: "1. Colanade 2. Cherrynade", tags: [cocktails,fun, refreshing])
         .addToImages(Image.findByFileName('sunrise.jpg'))
         .addToImages(Image.findByFileName('sunrise2.jpg'))
         .addToImages(Image.findByFileName('sunrise3.jpg'))
