@@ -1,7 +1,7 @@
 <div class="row news-post">
     <div class="featurette">
         <div class="row">
-            <div class="jumbotron" style="<g:if test="${eventInstance?.images}">background-image: url(${createLink(uri: '/')}assets/products/${Instance?.images[0].fileName}</g:if>);
+            <div class="jumbotron" style="<g:if test="${eventInstance?.images}">background-image: url(${createLink(uri: '/')}assets/products/${eventInstance?.images[0].fileName}</g:if>);
             background-repeat: no-repeat; background-size: cover; margin-left: 0px; height: 250px">
                 <h1 class="marketing">
                     <g:link controller="event" action="show" id="${eventInstance.id}">
