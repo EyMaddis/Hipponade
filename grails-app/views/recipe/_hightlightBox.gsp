@@ -10,6 +10,7 @@
     <div class="panel-body">
         ${recipe.shortDescription}
     </div>
+
     <div class="recipe-content panel-footer">
         <g:each in="${recipe.tags}" var="tag">
             <g:link controller="tag" action="show" id="${tag.id}" class="btn btn-default btn-xs">#${tag}</g:link>

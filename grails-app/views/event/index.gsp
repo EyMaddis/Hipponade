@@ -10,7 +10,7 @@
 
 <body>
 <div class="schnack container">
-    <div class="nav" role="navigation">
+    %{--<div class="nav" role="navigation">
         <ul>
             <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
             <li><g:link class="create" action="create"><g:message code="default.new.label"
@@ -62,7 +62,16 @@
         <div class="pagination">
             <g:paginate total="${eventInstanceCount ?: 0}"/>
         </div>
+    </div>--}%
+
+    <div>  %{--class="col-md-8"--}%
+    <g:each in="${eventInstanceList}" status="i" var="eventInstance">
+        <g:render template="single" bean="${eventInstance}" var="Instance" />
+    </g:each>
     </div>
+    %{--<div>
+        <g:render template="single" bean="${eventInstance}" var="Instance" />
+    </div>--}%
 </div>
 </body>
 </html>

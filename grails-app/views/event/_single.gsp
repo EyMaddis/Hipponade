@@ -1,9 +1,6 @@
 <div class="row news-post">
     <div class="featurette">
 
-        <g:if test="${Instance?.images}">
-
-
         <div class="row jumbotron" style="background-image: url(${createLink(uri: '/')}assets/products/<g:if test="${Instance?.images}">${Instance?.images[0].fileName}</g:if>);
         background-repeat: no-repeat; background-size: 100%; margin-left: 0px">
             <h1 class="marketing">${Instance.name}</h1>
@@ -17,7 +14,7 @@
                     </g:if>
             </div>
         </div>
-        </g:if>
+
         <div class="text-justify text-center panel panel-default news-content">
             <p class="lead">${Instance.description}</p>
 
@@ -27,5 +24,8 @@
             <p>${Instance.author.username} <strong>am</strong> <g:formatDate format="dd.MM.yyyy" date="${Instance.dateCreated}"/></p>
 
         </div>
+        %{--<a data-toggle="collapse" data-parent="#accordion" href="#eventInfo">
+        <span class="btn btn-default glyphicon glyphicon-arrow-down">Mehr</span>
+        </a>--}%
     </div>
 </div>
