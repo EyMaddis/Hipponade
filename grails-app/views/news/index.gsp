@@ -14,6 +14,7 @@
     <div>  %{--class="col-md-8"--}%
         <g:each in="${newsInstanceList}" status="i" var="newsInstance">
             <g:render template="single" bean="${newsInstance}" var="newsInstance" />
+            <hr>
         </g:each>
     </div>
     %{--<div class="col-md-4 news-sidebar">--}%
