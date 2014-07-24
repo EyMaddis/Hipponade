@@ -62,9 +62,9 @@ com_crashlytics_export_strings.xml
 
 
 # LATEX
-/*.aux
-/*.log
-/*.pdf
-/*.synctex.gz
-/*.toc
-/*.tex.bak
+*.aux
+*.log
+*.pdf
+*.synctex.gz
+*.toc
+*.tex.bak
